@@ -1,0 +1,1353 @@
+{
+  "_lisezMoi": "Fiches détaillées. Chaque fiche décrit ce que le droit du pays impose à X, comment X l'applique, et ce qui s'est passé. Les fiches sommaires des autres pays sont dans countries-sommaire.json. Champ 'verifieLe' : date à laquelle le contenu a été confronté aux sources listées.",
+
+  "pays": [
+    {
+      "code": "FR",
+      "nom": "France",
+      "region": "Europe",
+      "acces": "libre",
+      "severite": 2,
+      "blocs": ["ue", "coe"],
+      "resume": "Pas de censure préalable, mais un empilement d'obligations : retrait des contenus manifestement illicites signalés, coopération judiciaire, et depuis 2025 une vérification d'âge pour le contenu pour adultes. La particularité française est ailleurs : X fait l'objet d'une enquête pénale ouverte par le parquet de Paris, qui vise l'entreprise elle-même et non ses utilisateurs.",
+      "mecanismes": ["cwc", "retrait-global", "donnees", "age", "amendes"],
+      "lois": [
+        {
+          "nom": "LCEN — loi pour la confiance dans l'économie numérique (2004), art. 6",
+          "objet": "Fonde le régime d'hébergeur : X n'est pas responsable a priori, mais doit retirer « promptement » un contenu manifestement illicite qui lui est notifié.",
+          "delai": "promptement, sans délai chiffré ; une heure pour le contenu terroriste (règlement TCO)"
+        },
+        {
+          "nom": "Loi du 29 juillet 1881 sur la liberté de la presse",
+          "objet": "Définit ce qui est illicite : injure et diffamation, provocation à la haine raciale, apologie du terrorisme, contestation de crime contre l'humanité. C'est le texte qui sert de base à la plupart des retraits demandés en France."
+        },
+        {
+          "nom": "Loi SREN du 21 mai 2024",
+          "objet": "Confie à l'Arcom le pouvoir d'imposer une vérification d'âge et de faire bloquer les sites pornographiques. X, qui autorise le contenu pour adultes, entre dans le champ.",
+          "delai": "mise en demeure puis blocage"
+        },
+        {
+          "nom": "Plateforme Pharos",
+          "objet": "Guichet de signalement de la police judiciaire. Les demandes de retrait administratives (terrorisme, pédopornographie) passent par là, sans juge."
+        }
+      ],
+      "chronologie": [
+        { "date": "2013-01-24", "texte": "Le TGI de Paris ordonne à X de livrer les données identifiant les auteurs de tweets antisémites (#unbonjuif), sous astreinte de 1 000 € par jour." },
+        { "date": "2020-06-18", "texte": "Le Conseil constitutionnel censure l'essentiel de la loi Avia, qui imposait un retrait en 24 heures : le délai et l'absence de juge portaient une atteinte disproportionnée à la liberté d'expression." },
+        { "date": "2025-01", "texte": "Le parquet de Paris ouvre une enquête sur l'algorithme de X, saisi de signalements portant sur l'altération du fonctionnement d'un système de traitement automatisé de données." },
+        { "date": "2025-07-11", "texte": "L'enquête est élargie et confiée à la section J3 (criminalité organisée) : altération du fonctionnement d'un système en bande organisée et extraction frauduleuse de données. X dénonce publiquement une enquête « politiquement motivée » et refuse de transmettre son algorithme." },
+        { "date": "2025-07-25", "texte": "Application de la vérification d'âge par pièce d'identité ou selfie pour accéder au contenu sensible, en réponse aux obligations britanniques puis européennes." }
+      ],
+      "chiffresNote": "5 252 demandes légales entre 2012 et 2020, sixième volume mondial — largement des signalements de contenus haineux et d'apologie du terrorisme.",
+      "sources": [
+        { "titre": "Décision n° 2020-801 DC du Conseil constitutionnel (loi Avia)", "url": "https://www.conseil-constitutionnel.fr/decision/2020/2020801DC.htm" },
+        { "titre": "Loi SREN du 21 mai 2024", "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000049563368" },
+        { "titre": "X Transparency Center — France", "url": "https://transparency.x.com/en/reports/countries/fr" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "DE",
+      "nom": "Allemagne",
+      "region": "Europe",
+      "acces": "libre",
+      "severite": 2,
+      "blocs": ["ue", "coe"],
+      "resume": "L'Allemagne a inventé le modèle du retrait sous délai avec la NetzDG en 2017, et c'est chez elle que X a utilisé pour la première fois au monde son outil de masquage par pays, en 2012. Le droit pénal allemand interdit des contenus qui sont licites ailleurs : symboles nazis, négationnisme, incitation à la haine.",
+      "mecanismes": ["cwc", "retrait-global", "donnees", "amendes", "delai"],
+      "lois": [
+        {
+          "nom": "Digitale-Dienste-Gesetz (DDG), mai 2024",
+          "objet": "Met en œuvre le DSA et abroge la NetzDG. La Bundesnetzagentur devient le coordinateur allemand des services numériques."
+        },
+        {
+          "nom": "NetzDG (2017-2024), abrogée",
+          "objet": "Imposait le retrait des contenus « manifestement illégaux » en 24 heures, sept jours pour les cas douteux, sous peine de 50 millions d'euros d'amende. Modèle copié par une quinzaine de pays.",
+          "delai": "24 heures (régime abrogé)"
+        },
+        {
+          "nom": "Code pénal (StGB) §86a, §130, §188",
+          "objet": "Interdit l'usage de symboles d'organisations anticonstitutionnelles, l'incitation à la haine et la négation de la Shoah, et punit l'insulte aux personnalités politiques. Ce sont les motifs les plus fréquents des retraits allemands."
+        }
+      ],
+      "chronologie": [
+        { "date": "2012-10-18", "texte": "Première utilisation mondiale du masquage par pays : à la demande de la police de Basse-Saxe, le compte du groupe néonazi Besseres Hannover devient inaccessible depuis l'Allemagne, et reste visible partout ailleurs." },
+        { "date": "2018-01-01", "texte": "Entrée en application des sanctions de la NetzDG. X ouvre un centre de traitement à Berlin et Essen." },
+        { "date": "2024-05-14", "texte": "Le DDG remplace la NetzDG : le régime allemand s'aligne sur le DSA." }
+      ],
+      "chiffresNote": "1 071 demandes légales entre 2012 et 2020 et 522 posts masqués : un volume modeste, mais un taux de suite donnée élevé, effet de demandes fondées sur des infractions pénales précises plutôt que sur des motifs généraux.",
+      "sources": [
+        { "titre": "Digitale-Dienste-Gesetz", "url": "https://www.gesetze-im-internet.de/ddg/" },
+        { "titre": "X Transparency Center — Allemagne", "url": "https://transparency.x.com/en/reports/countries/de" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "GB",
+      "nom": "Royaume-Uni",
+      "region": "Europe",
+      "acces": "restreint",
+      "severite": 3,
+      "blocs": ["coe"],
+      "resume": "L'Online Safety Act a fait basculer le pays d'un régime de retrait sur signalement à une obligation de conception : X doit empêcher que certains contenus atteignent certains publics. Conséquence visible depuis juillet 2025 : sans vérification d'âge, une partie de la plateforme est fermée aux utilisateurs britanniques.",
+      "mecanismes": ["retrait-global", "age", "amendes", "delai"],
+      "lois": [
+        {
+          "nom": "Online Safety Act 2023",
+          "objet": "Impose un devoir de diligence : évaluation des risques, retrait des contenus illégaux prioritaires, protection des mineurs. L'Ofcom peut infliger jusqu'à 18 millions de livres ou 10 % du chiffre d'affaires mondial, et demander le blocage du service.",
+          "delai": "retrait « rapide » après signalement ; mesures de conception permanentes"
+        },
+        {
+          "nom": "Codes de l'Ofcom sur l'âge (juillet 2025)",
+          "objet": "Exigent une vérification d'âge « hautement efficace » pour la pornographie et les contenus d'automutilation. X a déployé la pièce d'identité ou le selfie."
+        },
+        {
+          "nom": "Malicious Communications Act 1988 et Communications Act 2003, s.127",
+          "objet": "Pénalisent les messages « grossièrement offensants ». Des utilisateurs britanniques ont été poursuivis pour de simples posts."
+        }
+      ],
+      "chronologie": [
+        { "date": "2023-10-26", "texte": "L'Online Safety Act reçoit la sanction royale." },
+        { "date": "2025-07-25", "texte": "Entrée en vigueur des obligations de vérification d'âge. X restreint l'accès au contenu sensible pour les comptes britanniques non vérifiés ; le trafic des services de VPN bondit." }
+      ],
+      "chiffresNote": "797 demandes légales seulement entre 2012 et 2020, mais 1 762 posts masqués — quatrième rang mondial. Deux semestres expliquent presque tout : le premier de 2016 et le premier de 2020. Peu de demandes, très larges, et suivies d'effet.",
+      "sources": [
+        { "titre": "Online Safety Act 2023", "url": "https://www.legislation.gov.uk/ukpga/2023/50/contents" },
+        { "titre": "Ofcom — protection of children codes", "url": "https://www.ofcom.org.uk/online-safety/protecting-children/" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "TR",
+      "nom": "Turquie",
+      "region": "Europe / Asie",
+      "acces": "restreint",
+      "severite": 5,
+      "blocs": ["coe"],
+      "resume": "Le pays qui a le plus longtemps figuré en tête des demandes de retrait, et celui où le masquage par pays est le plus visible. La loi 5651 donne à l'administration le pouvoir d'ordonner un retrait sans juge, avec un arsenal gradué : amende, coupure publicitaire, puis réduction de bande passante jusqu'à rendre le service inutilisable.",
+      "mecanismes": ["cwc", "blocage-fai", "ralentissement", "representant-local", "amendes", "delai"],
+      "lois": [
+        {
+          "nom": "Loi n° 5651 (2007), amendée en octobre 2020 et octobre 2022",
+          "objet": "Oblige les plateformes de plus d'un million d'utilisateurs quotidiens à nommer un représentant local, à répondre aux demandes en 48 heures et à publier un rapport semestriel en turc. En cas de refus : amendes, interdiction de vendre de la publicité, puis réduction de bande passante de 50 % puis 90 %.",
+          "delai": "48 heures pour répondre, 24 heures pour exécuter une décision de justice"
+        },
+        {
+          "nom": "Art. 217/A du code pénal (loi dite « sur la désinformation », octobre 2022)",
+          "objet": "Punit de un à trois ans de prison la diffusion publique d'informations fausses de nature à troubler l'ordre public. Le flou de la définition est ce qui lui est reproché."
+        },
+        {
+          "nom": "Art. 299 du code pénal — insulte au président",
+          "objet": "Jusqu'à quatre ans de prison. Des milliers de poursuites depuis 2014, souvent déclenchées par un post."
+        }
+      ],
+      "chronologie": [
+        { "date": "2014-03-20", "texte": "Blocage national de Twitter à la veille des élections locales, après la diffusion d'écoutes visant le gouvernement. La Cour constitutionnelle le juge illégal et il est levé le 3 avril." },
+        { "date": "2015-12-01", "texte": "La CEDH, dans Cengiz et autres, juge qu'un blocage général d'une plateforme viole l'article 10 de la Convention." },
+        { "date": "2021-04", "texte": "X nomme un représentant légal en Turquie, se conformant à la loi 5651 après une coupure publicitaire." },
+        { "date": "2023-05-12", "texte": "Deux jours avant la présidentielle, X reconnaît avoir restreint « certains contenus » en Turquie pour que le service reste disponible. La décision est vivement critiquée." },
+        { "date": "2025-03", "texte": "Après l'arrestation du maire d'Istanbul Ekrem İmamoğlu, X rend inaccessibles depuis la Turquie plusieurs centaines de comptes, dont ceux de journalistes et de collectifs étudiants, tout en refusant un blocage plus large." }
+      ],
+      "chiffresNote": "49 525 demandes légales et 107 221 comptes visés entre 2012 et 2020 : deuxième volume mondial, mais le premier en nombre de posts effectivement masqués (12 317).",
+      "sources": [
+        { "titre": "X Transparency Center — Turquie et rapports loi 5651", "url": "https://transparency.x.com/en/reports/countries/tr" },
+        { "titre": "CEDH — Cengiz et autres c. Turquie", "url": "https://hudoc.echr.coe.int/eng?i=001-159188" },
+        { "titre": "Freedom House — Freedom on the Net, Turquie", "url": "https://freedomhouse.org/country/turkey/freedom-net" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "RU",
+      "nom": "Russie",
+      "region": "Europe / Asie",
+      "acces": "bloque",
+      "severite": 5,
+      "blocs": [],
+      "resume": "X est bloqué depuis le 4 mars 2022. Avant cela, la Russie avait expérimenté sur Twitter une technique inédite : plutôt que de couper, ralentir le service jusqu'à le rendre pénible, pour forcer la coopération sans assumer un blocage. La question des retraits ne se pose plus vraiment — le service est hors d'atteinte sans VPN, et les VPN eux-mêmes sont pourchassés.",
+      "mecanismes": ["blocage-fai", "ralentissement", "representant-local", "amendes", "retrait-global"],
+      "lois": [
+        {
+          "nom": "Loi 149-FZ sur l'information, et registre du Roskomnadzor",
+          "objet": "Permet à l'autorité de télécommunications d'ordonner un retrait ou un blocage sans décision de justice pour une longue liste de contenus."
+        },
+        {
+          "nom": "Loi dite « d'atterrissage » (juillet 2021)",
+          "objet": "Impose aux plateformes de plus de 500 000 utilisateurs russes d'ouvrir une entité locale. X ne s'y est pas conformé."
+        },
+        {
+          "nom": "Art. 207.3 du code pénal (mars 2022)",
+          "objet": "Punit jusqu'à quinze ans de prison la diffusion d'« informations mensongères » sur l'armée. C'est le texte qui a rendu la couverture indépendante de la guerre impossible."
+        }
+      ],
+      "chronologie": [
+        { "date": "2021-03-10", "texte": "Le Roskomnadzor ralentit Twitter sur tous les mobiles et la moitié des ordinateurs, invoquant le refus de retirer des contenus liés au suicide, à la drogue et à la pédopornographie. C'est la première application à grande échelle de la technique." },
+        { "date": "2021-04-16", "texte": "Un tribunal moscovite condamne Twitter à environ 117 000 dollars d'amende ; l'entreprise indique avoir retiré 91 % des contenus visés." },
+        { "date": "2022-03-04", "texte": "Blocage complet de Twitter en Russie, quelques jours après l'invasion de l'Ukraine. Il n'a pas été levé depuis." }
+      ],
+      "chiffresNote": "36 787 demandes légales et 8 328 posts masqués entre 2012 et 2020 — troisième volume mondial, à une époque où le service était encore accessible.",
+      "sources": [
+        { "titre": "X Transparency Center — Russie", "url": "https://transparency.x.com/en/reports/countries/ru" },
+        { "titre": "NetBlocks — blocage de Twitter en Russie", "url": "https://netblocks.org/reports/twitter-restricted-in-russia-amid-conflict-with-ukraine-ZreznBZ9" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "IN",
+      "nom": "Inde",
+      "region": "Asie",
+      "acces": "libre",
+      "severite": 4,
+      "blocs": [],
+      "resume": "Le seul pays où X a attaqué l'État en justice sur les retraits — et perdu. Deux régimes coexistent : l'article 69A, avec sa procédure secrète, et depuis 2024 le portail Sahyog, qui permet à une multitude d'administrations de demander directement un retrait. Le juge a validé Sahyog en septembre 2025 en refusant à X, société étrangère, le bénéfice de la liberté d'expression constitutionnelle.",
+      "mecanismes": ["cwc", "retrait-global", "delai", "representant-local", "donnees"],
+      "lois": [
+        {
+          "nom": "Information Technology Act 2000, art. 69A",
+          "objet": "Permet au gouvernement d'ordonner le blocage d'un contenu pour la souveraineté, la sécurité de l'État ou l'ordre public. Les ordres sont confidentiels : l'utilisateur visé n'apprend souvent le blocage que par X."
+        },
+        {
+          "nom": "IT Rules 2021 (Intermediary Guidelines)",
+          "objet": "Imposent un responsable de conformité résident, un officier de réclamation et un cadre de retrait. Perdre le statut d'intermédiaire fait tomber l'immunité de la plateforme.",
+          "delai": "36 heures après un ordre, 24 heures pour l'imagerie intime non consentie"
+        },
+        {
+          "nom": "Art. 79(3)(b) et portail Sahyog (2024)",
+          "objet": "Ouvre la demande de retrait à une longue liste d'agences fédérales et locales, via un guichet unique tenu par l'Indian Cyber Crime Coordination Centre."
+        }
+      ],
+      "chronologie": [
+        { "date": "2021-02", "texte": "Le ministère de l'Intérieur demande le blocage de centaines de comptes couvrant la mobilisation des agriculteurs. X s'exécute partiellement, puis rétablit une partie des comptes, s'attirant une menace de poursuites pénales contre ses employés." },
+        { "date": "2021-05-24", "texte": "La police de Delhi se présente dans les bureaux de X après qu'un post d'un porte-parole du BJP a été étiqueté « contenu manipulé »." },
+        { "date": "2022-07-05", "texte": "X attaque le gouvernement indien devant la Haute Cour du Karnataka, jugeant les ordres de blocage disproportionnés et arbitraires. Le recours est rejeté en juin 2023, avec 5 millions de roupies d'amende." },
+        { "date": "2025-05", "texte": "Pendant l'opération Sindoor, les comptes de Reuters, du Global Times et de TRT World sont rendus inaccessibles en Inde sur demande légale. Le gouvernement affirme n'avoir rien demandé ; les comptes sont rétablis." },
+        { "date": "2025-09-24", "texte": "La Haute Cour du Karnataka valide le portail Sahyog et juge qu'une société étrangère ne peut invoquer l'article 19 de la Constitution indienne. X annonce faire appel." }
+      ],
+      "chiffresNote": "12 435 demandes légales et 48 341 comptes visés entre 2012 et 2020 ; le volume a fortement augmenté depuis, hors de la période couverte par les données publiques.",
+      "sources": [
+        { "titre": "X Corp v. Union of India — analyse SFLC.in", "url": "https://sflc.in/xcorp-judgment-analysis/" },
+        { "titre": "Columbia Global Freedom of Expression — X v. Union of India (Sahyog)", "url": "https://globalfreedomofexpression.columbia.edu/cases/x-v-union-of-india-sahyog-portal" },
+        { "titre": "X Transparency Center — Inde", "url": "https://transparency.x.com/en/reports/countries/in" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "JP",
+      "nom": "Japon",
+      "region": "Asie",
+      "acces": "libre",
+      "severite": 2,
+      "blocs": [],
+      "resume": "Premier demandeur mondial, et de loin : environ la moitié des demandes légales reçues par X viennent du Japon. Mais le contenu visé n'a presque rien de politique — il s'agit massivement de vente de drogue, de prostitution, de recrutement pour des délits, et d'obscénité non floutée au sens de l'article 175 du code pénal.",
+      "mecanismes": ["cwc", "retrait-global", "donnees", "delai"],
+      "lois": [
+        {
+          "nom": "Loi sur la limitation de responsabilité des fournisseurs (2001), révisée en 2024",
+          "objet": "Devenue la « loi sur le traitement par les plateformes de la distribution de l'information », en vigueur le 1er avril 2025 : délai de réponse aux signalements de diffamation, obligation de publier les critères de retrait."
+        },
+        {
+          "nom": "Art. 175 du code pénal — obscénité",
+          "objet": "Interdit la distribution d'images obscènes non censurées. C'est pourquoi une partie du contenu adulte est floutée ou retirée au Japon et nulle part ailleurs."
+        },
+        {
+          "nom": "Loi sur le contrôle des stupéfiants et loi anti-prostitution",
+          "objet": "Fondent l'essentiel des demandes policières adressées à X."
+        }
+      ],
+      "chronologie": [
+        { "date": "2022", "texte": "Le Japon devient le premier demandeur mondial, avec 43 % du total des demandes légales adressées à X." },
+        { "date": "2025-04-01", "texte": "Entrée en vigueur de la loi révisée sur les plateformes : délais de traitement encadrés et transparence sur les critères." }
+      ],
+      "chiffresNote": "55 590 demandes légales entre 2012 et 2020, premier volume mondial — mais seulement 1 702 posts masqués, signe que X n'y donne suite que partiellement.",
+      "sources": [
+        { "titre": "X Transparency Center — Japon", "url": "https://transparency.x.com/en/reports/countries/jp" },
+        { "titre": "Ministère japonais des Affaires intérieures — loi sur les plateformes", "url": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/d_syohi/ihoyuugai.html" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "KR",
+      "nom": "Corée du Sud",
+      "region": "Asie",
+      "acces": "libre",
+      "severite": 3,
+      "blocs": [],
+      "resume": "Quatrième demandeur mondial. La singularité coréenne est institutionnelle : la Korea Communications Standards Commission, un organe administratif, peut ordonner le blocage d'un contenu sans passer par un juge. Deux motifs dominent : le contenu sexuel non consenti, et tout ce qui relève de la loi sur la sécurité nationale, c'est-à-dire la propagande nord-coréenne.",
+      "mecanismes": ["cwc", "blocage-fai", "delai"],
+      "lois": [
+        {
+          "nom": "Loi sur la sécurité nationale (1948)",
+          "objet": "Interdit la diffusion de contenus favorables à la Corée du Nord. C'est à ce titre que le compte officiel nord-coréen a été bloqué."
+        },
+        {
+          "nom": "Loi sur la promotion de l'utilisation des réseaux d'information",
+          "objet": "Donne à la KCSC le pouvoir d'ordonner suppression ou blocage. Un régime de vérification d'identité pour poster a existé jusqu'à sa censure par la Cour constitutionnelle en 2012."
+        },
+        {
+          "nom": "Loi sur les infractions sexuelles (renforcée en 2020)",
+          "objet": "Adoptée après l'affaire des « chambres n° » : retrait accéléré des images sexuelles non consenties, avec obligation de moyens pour les plateformes."
+        }
+      ],
+      "chronologie": [
+        { "date": "2010-08-19", "texte": "Le compte nord-coréen @uriminzok est bloqué en Corée du Sud au titre de la loi sur la sécurité nationale." },
+        { "date": "2020", "texte": "Après l'affaire Nth Room, les obligations de retrait des contenus sexuels non consentis sont durcies." }
+      ],
+      "chiffresNote": "10 937 demandes légales et 41 221 comptes visés entre 2012 et 2020, pour seulement 3 posts masqués : la Corée bloque à la source, chez les opérateurs, plutôt que de faire retirer par X.",
+      "sources": [
+        { "titre": "X Transparency Center — Corée du Sud", "url": "https://transparency.x.com/en/reports/countries/kr" },
+        { "titre": "Freedom House — Freedom on the Net, Corée du Sud", "url": "https://freedomhouse.org/country/south-korea/freedom-net" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "BR",
+      "nom": "Brésil",
+      "region": "Amériques",
+      "acces": "libre",
+      "severite": 4,
+      "blocs": [],
+      "resume": "Le seul pays démocratique à avoir coupé X sur l'ensemble de son territoire, pendant quarante jours en 2024. Le bras de fer opposait le juge Alexandre de Moraes, du Tribunal fédéral suprême, à Elon Musk sur des comptes accusés de menacer l'État de droit. X a fini par céder sur tout : représentant légal, amendes, blocage des comptes.",
+      "mecanismes": ["cwc", "retrait-global", "blocage-fai", "representant-local", "amendes"],
+      "lois": [
+        {
+          "nom": "Marco Civil da Internet (loi 12.965/2014), art. 19",
+          "objet": "Posait le principe qu'une plateforme n'est responsable qu'après avoir ignoré une décision de justice. Le Tribunal fédéral suprême l'a jugé partiellement inconstitutionnel le 26 juin 2025 : pour certaines catégories graves, la responsabilité naît désormais du seul signalement."
+        },
+        {
+          "nom": "Loi 14.197/2021 sur les atteintes à l'État démocratique de droit",
+          "objet": "Remplace la loi de sécurité nationale de la dictature ; elle fonde les enquêtes sur les réseaux de désinformation antidémocratique."
+        },
+        {
+          "nom": "Résolutions du Tribunal supérieur électoral (2022 et 2024)",
+          "objet": "Imposent le retrait de la désinformation électorale dans des délais très courts pendant les campagnes.",
+          "delai": "de deux à vingt-quatre heures selon la gravité et la période"
+        }
+      ],
+      "chronologie": [
+        { "date": "2024-08-30", "texte": "Le juge Moraes ordonne la suspension de X au Brésil : l'entreprise a fermé son bureau local et refusé de désigner un représentant, après avoir refusé de bloquer des comptes visés par une enquête." },
+        { "date": "2024-09", "texte": "Le blocage s'accompagne d'une amende de 50 000 réaux par jour pour quiconque utilise un VPN pour y accéder — mesure très critiquée, jamais appliquée." },
+        { "date": "2024-10-08", "texte": "X est rétabli après avoir nommé une représentante, bloqué les comptes visés et payé environ 28,6 millions de réaux d'amendes." },
+        { "date": "2025-06-26", "texte": "Le Tribunal fédéral suprême élargit la responsabilité des plateformes en jugeant l'article 19 du Marco Civil partiellement inconstitutionnel." }
+      ],
+      "chiffresNote": "944 demandes légales entre 2012 et 2020, mais 1 586 posts masqués — proportionnellement l'un des taux d'exécution les plus élevés du monde, effet du régime de décision judiciaire.",
+      "sources": [
+        { "titre": "Wikipédia — blocage de X au Brésil", "url": "https://en.wikipedia.org/wiki/Blocking_of_X_in_Brazil" },
+        { "titre": "Marco Civil da Internet", "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm" },
+        { "titre": "X Transparency Center — Brésil", "url": "https://transparency.x.com/en/reports/countries/br" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "US",
+      "nom": "États-Unis",
+      "region": "Amériques",
+      "acces": "libre",
+      "severite": 1,
+      "blocs": [],
+      "resume": "Le pays où l'État peut le moins. Le Premier amendement interdit à l'administration d'ordonner le retrait d'un discours, même faux ou haineux, et la section 230 protège X de toute responsabilité pour ce que ses utilisateurs publient. Ce qui est retiré aux États-Unis l'est presque toujours au titre des règles internes de X, pas de la loi.",
+      "mecanismes": ["retrait-global", "donnees"],
+      "lois": [
+        {
+          "nom": "Premier amendement",
+          "objet": "Interdit toute censure d'État du discours politique. Les rares exceptions — menace crédible, incitation imminente, obscénité au sens Miller, pédopornographie — sont d'interprétation stricte."
+        },
+        {
+          "nom": "Section 230 du Communications Decency Act (1996)",
+          "objet": "Exonère X de responsabilité pour les contenus de ses utilisateurs et pour ses décisions de modération. C'est le texte qui rend possible la modération sans obligation de résultat."
+        },
+        {
+          "nom": "18 U.S.C. §2258A et FOSTA-SESTA (2018)",
+          "objet": "Imposent le signalement des contenus pédocriminels au NCMEC et lèvent l'immunité pour le proxénétisme en ligne. Ce sont les deux vraies obligations de retrait du droit fédéral."
+        },
+        {
+          "nom": "DMCA (1998)",
+          "objet": "Organise le retrait sur notification pour le droit d'auteur, avec contre-notification possible. Les demandes de ce type sont publiées sur Lumen."
+        }
+      ],
+      "chronologie": [
+        { "date": "2023-05-25", "texte": "X révèle avoir restreint des contenus en Turquie avant les élections ; le contraste avec sa position américaine nourrit le débat sur la cohérence de l'entreprise." },
+        { "date": "2024-06-26", "texte": "Dans Murthy v. Missouri, la Cour suprême rejette pour défaut de qualité à agir un recours accusant l'administration d'avoir fait pression sur les plateformes — la question de fond n'est pas tranchée." }
+      ],
+      "chiffresNote": "1 416 demandes légales entre 2012 et 2020, et aucun post masqué par pays : les demandes américaines portent presque exclusivement sur des données d'utilisateurs, pas sur du retrait.",
+      "sources": [
+        { "titre": "47 U.S.C. §230", "url": "https://www.law.cornell.edu/uscode/text/47/230" },
+        { "titre": "Lumen Database", "url": "https://lumendatabase.org/" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "AU",
+      "nom": "Australie",
+      "region": "Océanie",
+      "acces": "restreint",
+      "severite": 3,
+      "blocs": [],
+      "resume": "L'Australie est le pays qui a tenté d'imposer à X un retrait mondial depuis son territoire — et qui a échoué en justice. Elle a en revanche réussi ce que personne d'autre n'avait fait : fermer la plateforme aux moins de seize ans.",
+      "mecanismes": ["retrait-global", "age", "amendes", "delai"],
+      "lois": [
+        {
+          "nom": "Online Safety Act 2021",
+          "objet": "Donne à l'eSafety Commissioner le pouvoir d'ordonner le retrait de contenus violents, d'images intimes non consenties et de cyberharcèlement.",
+          "delai": "24 heures"
+        },
+        {
+          "nom": "Online Safety Amendment (Social Media Minimum Age) Act 2024",
+          "objet": "Interdit aux plateformes concernées, dont X, de laisser un compte à un utilisateur de moins de seize ans. Sanction jusqu'à 49,5 millions de dollars australiens.",
+          "delai": "en vigueur depuis le 10 décembre 2025"
+        }
+      ],
+      "chronologie": [
+        { "date": "2024-04-16", "texte": "L'eSafety Commissioner ordonne le retrait mondial des vidéos de l'attaque au couteau de Wakeley. X les masque en Australie mais refuse le retrait global." },
+        { "date": "2024-05-13", "texte": "La Cour fédérale refuse de prolonger l'injonction : un régulateur national ne peut pas imposer un retrait au reste du monde. L'eSafety abandonne la procédure en juin." },
+        { "date": "2025-12-10", "texte": "Entrée en vigueur de l'âge minimum de seize ans. X doit désactiver les comptes de mineurs australiens." }
+      ],
+      "chiffresNote": "Volume de demandes faible ; l'action australienne passe par des injonctions ciblées et par la régulation d'accès.",
+      "sources": [
+        { "titre": "eSafety Commissioner", "url": "https://www.esafety.gov.au/" },
+        { "titre": "Online Safety Act 2021", "url": "https://www.legislation.gov.au/C2021A00076/latest/text" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "CN",
+      "nom": "Chine",
+      "region": "Asie",
+      "acces": "bloque",
+      "severite": 5,
+      "blocs": [],
+      "resume": "X est inaccessible depuis le 2 juin 2009, deux jours avant le vingtième anniversaire de Tian'anmen. Il n'y a pas de règles de retrait à décrire : le service n'existe pas juridiquement en Chine. Le paradoxe est que des dizaines de comptes diplomatiques et médiatiques officiels chinois y publient quotidiennement, en s'adressant à l'extérieur.",
+      "mecanismes": ["blocage-fai"],
+      "lois": [
+        {
+          "nom": "Loi sur la cybersécurité (2017) et règlements de la CAC",
+          "objet": "Imposent le stockage local des données et l'enregistrement sous identité réelle. Aucune plateforme étrangère non conforme n'est autorisée."
+        },
+        {
+          "nom": "Grande muraille électronique",
+          "objet": "Filtrage au niveau de la dorsale nationale : DNS, IP et inspection profonde de paquets. Les VPN non licenciés sont illégaux."
+        }
+      ],
+      "chronologie": [
+        { "date": "2009-06-02", "texte": "Blocage de Twitter à l'approche du vingtième anniversaire de la répression de Tian'anmen. Il n'a jamais été levé." }
+      ],
+      "chiffresNote": "Des demandes chinoises apparaissent malgré tout dans les rapports de X — signalées d'un astérisque, car le service y est bloqué.",
+      "sources": [
+        { "titre": "Wikipédia — censure de X", "url": "https://en.wikipedia.org/wiki/Censorship_of_X" },
+        { "titre": "GreatFire", "url": "https://en.greatfire.org/" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "IR",
+      "nom": "Iran",
+      "region": "Moyen-Orient",
+      "acces": "bloque",
+      "severite": 5,
+      "blocs": [],
+      "resume": "Bloqué depuis juin 2009, pendant le Mouvement vert. Le blocage n'a pas empêché le Guide suprême et une partie du gouvernement d'y tenir des comptes — la loi interdit le service aux citoyens, pas à l'État. Les VPN sont massivement utilisés et périodiquement pourchassés.",
+      "mecanismes": ["blocage-fai"],
+      "lois": [
+        {
+          "nom": "Comité de détermination des contenus criminels",
+          "objet": "Organe interministériel qui décide des blocages, sans recours utile."
+        },
+        {
+          "nom": "Loi sur les crimes informatiques (2009)",
+          "objet": "Pénalise la diffusion de contenus contraires à la morale publique ou à la sécurité nationale."
+        }
+      ],
+      "chronologie": [
+        { "date": "2009-06", "texte": "Blocage pendant les manifestations contre la réélection de Mahmoud Ahmadinejad." },
+        { "date": "2024-12-24", "texte": "L'Iran lève le blocage de WhatsApp et de Google Play. X n'est pas concerné et reste inaccessible." }
+      ],
+      "chiffresNote": "Les rapports de X mentionnent l'Iran avec un astérisque : demandes enregistrées, service bloqué.",
+      "sources": [
+        { "titre": "Article 19 — Iran", "url": "https://www.article19.org/regions/iran/" },
+        { "titre": "NetBlocks — Iran", "url": "https://netblocks.org/reports" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "PK",
+      "nom": "Pakistan",
+      "region": "Asie",
+      "acces": "restreint",
+      "severite": 5,
+      "blocs": [],
+      "resume": "X a été coupé pendant quinze mois, de février 2024 à mai 2025, sans qu'aucun ordre public n'ait d'abord été assumé : le gouvernement a nié le blocage avant de le reconnaître devant la justice. Le motif le plus fréquent de retrait reste le blasphème, passible de la peine de mort au Pakistan.",
+      "mecanismes": ["cwc", "blocage-fai", "ralentissement", "delai"],
+      "lois": [
+        {
+          "nom": "Prevention of Electronic Crimes Act 2016 (PECA), amendé en janvier 2025",
+          "objet": "Crée un délit de diffusion de « fausses informations » puni de trois ans de prison, et institue une autorité de régulation des médias numériques dotée de pouvoirs de blocage."
+        },
+        {
+          "nom": "Art. 295-C du code pénal — blasphème",
+          "objet": "Peine capitale. C'est le fondement de la majorité des demandes de retrait adressées à X depuis le Pakistan."
+        },
+        {
+          "nom": "Règles de 2021 sur le retrait des contenus illicites en ligne",
+          "objet": "Donnent à la PTA le pouvoir d'ordonner un retrait sans juge.",
+          "delai": "24 heures, 6 heures en urgence"
+        }
+      ],
+      "chronologie": [
+        { "date": "2024-02-17", "texte": "X devient inaccessible au Pakistan après des accusations de fraude aux législatives. Le gouvernement nie d'abord toute décision." },
+        { "date": "2024-04", "texte": "Devant la Haute Cour de Sindh, le ministère de l'Intérieur reconnaît avoir ordonné le blocage pour raisons de sécurité nationale." },
+        { "date": "2025-05-13", "texte": "Le blocage est levé après quinze mois." },
+        { "date": "2025-11", "texte": "Nouvelle coupure de courte durée pendant les manifestations du Tehreek-e-Labbaik ; rétablie le lendemain." }
+      ],
+      "chiffresNote": "1 742 demandes légales mais 18 251 comptes visés entre 2012 et 2020 : des demandes peu nombreuses et très larges.",
+      "sources": [
+        { "titre": "X Transparency Center — Pakistan", "url": "https://transparency.x.com/en/reports/countries/pk" },
+        { "titre": "NetBlocks — Pakistan", "url": "https://netblocks.org/reports" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "VE",
+      "nom": "Venezuela",
+      "region": "Amériques",
+      "acces": "bloque",
+      "severite": 5,
+      "blocs": [],
+      "resume": "Nicolás Maduro a ordonné le 8 août 2024 un blocage de dix jours après la présidentielle contestée, accusant Elon Musk d'attiser un coup d'État. Le délai est passé, le blocage est resté. Les coupures ponctuelles de X y sont une pratique ancienne, documentée depuis 2014.",
+      "mecanismes": ["blocage-fai"],
+      "lois": [
+        {
+          "nom": "Loi RESORTE (2004, étendue à l'internet en 2010)",
+          "objet": "Permet à la CONATEL d'ordonner le retrait de contenus incitant à la haine ou troublant l'ordre public."
+        },
+        {
+          "nom": "Loi contre la haine (2017)",
+          "objet": "Punit jusqu'à vingt ans de prison des publications jugées haineuses, et autorise le blocage des plateformes qui ne les retirent pas en six heures.",
+          "delai": "6 heures"
+        }
+      ],
+      "chronologie": [
+        { "date": "2014-02-13", "texte": "Blocage des images sur Twitter pendant les manifestations ; l'entreprise propose un accès par SMS." },
+        { "date": "2019-01", "texte": "Coupures répétées lors des interventions de Juan Guaidó, documentées par NetBlocks." },
+        { "date": "2024-08-08", "texte": "Maduro annonce un blocage de dix jours après l'élection présidentielle contestée. Le service n'a pas été rétabli normalement depuis." }
+      ],
+      "chiffresNote": "Volume de demandes légales très faible : le Venezuela ne demande pas de retrait, il coupe.",
+      "sources": [
+        { "titre": "NetBlocks — Venezuela", "url": "https://netblocks.org/reports" },
+        { "titre": "Access Now — #KeepItOn", "url": "https://www.accessnow.org/campaign/keepiton/" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "ID",
+      "nom": "Indonésie",
+      "region": "Asie",
+      "acces": "restreint",
+      "severite": 4,
+      "blocs": [],
+      "resume": "Le pays qui a fait viser le plus de comptes au monde : 124 077 entre 2012 et 2020, pour seulement 1 396 demandes. Le ministère du Numérique adresse des listes massives, visant surtout les jeux d'argent en ligne et la pornographie. Le régime d'enregistrement obligatoire lui donne un moyen de pression direct : une plateforme non enregistrée est coupée.",
+      "mecanismes": ["cwc", "retrait-global", "blocage-fai", "representant-local", "delai"],
+      "lois": [
+        {
+          "nom": "Règlement ministériel MR5 (2020)",
+          "objet": "Oblige toute plateforme à s'enregistrer auprès du ministère et à désigner un contact local, sous peine de blocage.",
+          "delai": "24 heures, 4 heures pour l'urgence"
+        },
+        {
+          "nom": "Loi ITE (2008, révisée en 2016 et 2024)",
+          "objet": "Pénalise la diffamation, le blasphème et la diffusion de contenus contraires à la décence. Utilisée contre des utilisateurs individuels."
+        }
+      ],
+      "chronologie": [
+        { "date": "2022-07-30", "texte": "L'Indonésie coupe plusieurs plateformes non enregistrées au titre de MR5 ; celles qui s'enregistrent sont rétablies en quelques jours." },
+        { "date": "2026-01", "texte": "Blocage temporaire de l'outil Grok de X, accusé de servir à fabriquer des images sexuelles truquées." }
+      ],
+      "chiffresNote": "124 077 comptes visés entre 2012 et 2020, premier rang mondial pour ce seul indicateur.",
+      "sources": [
+        { "titre": "X Transparency Center — Indonésie", "url": "https://transparency.x.com/en/reports/countries/id" },
+        { "titre": "EFF — Indonesia MR5", "url": "https://www.eff.org/deeplinks/2021/05/indonesias-mr5-regulation-threat-free-expression" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "AE",
+      "nom": "Émirats arabes unis",
+      "region": "Moyen-Orient",
+      "acces": "libre",
+      "severite": 4,
+      "blocs": [],
+      "resume": "Service accessible, mais le droit émirien pénalise très largement l'expression en ligne : la critique de l'État, l'atteinte à la réputation du pays et la diffusion de « rumeurs » sont des délits. Cinquième pays au monde par le nombre de comptes visés.",
+      "mecanismes": ["cwc", "retrait-global", "donnees"],
+      "lois": [
+        {
+          "nom": "Décret-loi fédéral 34/2021 sur la lutte contre les rumeurs et la cybercriminalité",
+          "objet": "Punit la diffusion d'informations fausses, la critique de l'État et des dirigeants, et l'atteinte à la réputation du pays, avec des peines de prison et d'expulsion."
+        },
+        {
+          "nom": "Loi antiterroriste 7/2014",
+          "objet": "Définition très large permettant de poursuivre l'expression politique."
+        }
+      ],
+      "chronologie": [
+        { "date": "2012", "texte": "Vague d'arrestations d'utilisateurs de Twitter dans le cadre de l'affaire dite des « UAE 94 »." }
+      ],
+      "chiffresNote": "1 156 demandes légales mais 31 874 comptes visés entre 2012 et 2020.",
+      "sources": [
+        { "titre": "X Transparency Center — Émirats arabes unis", "url": "https://transparency.x.com/en/reports/countries/ae" },
+        { "titre": "Human Rights Watch — Émirats arabes unis", "url": "https://www.hrw.org/middle-east/north-africa/united-arab-emirates" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "SA",
+      "nom": "Arabie saoudite",
+      "region": "Moyen-Orient",
+      "acces": "libre",
+      "severite": 5,
+      "blocs": [],
+      "resume": "X est très utilisé en Arabie saoudite, et c'est précisément ce qui en fait un terrain de répression : les condamnations pour des posts se comptent en décennies de prison. Le pays a par ailleurs été le seul à faire infiltrer Twitter par des agents recrutés parmi les employés, pour identifier des utilisateurs anonymes.",
+      "mecanismes": ["cwc", "retrait-global", "donnees"],
+      "lois": [
+        {
+          "nom": "Loi anti-cybercriminalité (2007)",
+          "objet": "Punit jusqu'à cinq ans de prison la production de contenus « portant atteinte à l'ordre public, aux valeurs religieuses ou à la morale »."
+        },
+        {
+          "nom": "Loi antiterroriste (2014, révisée 2017)",
+          "objet": "Assimile à du terrorisme la critique du roi ou de l'État. Fondement de la plupart des lourdes condamnations pour des tweets."
+        }
+      ],
+      "chronologie": [
+        { "date": "2015", "texte": "Deux employés de Twitter transmettent à Riyad les données de comptes de dissidents. Ahmad Abouammo est condamné aux États-Unis en 2022 pour espionnage." },
+        { "date": "2022-08", "texte": "Salma al-Shehab, doctorante, est condamnée à 34 ans de prison pour ses publications sur Twitter." }
+      ],
+      "chiffresNote": "Peu de demandes formelles de retrait : la pression s'exerce sur les personnes, pas sur la plateforme.",
+      "sources": [
+        { "titre": "Amnesty International — Arabie saoudite", "url": "https://www.amnesty.org/en/location/middle-east-and-north-africa/saudi-arabia/" },
+        { "titre": "DOJ — United States v. Abouammo", "url": "https://www.justice.gov/usao-ndca" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "EG",
+      "nom": "Égypte",
+      "region": "Afrique",
+      "acces": "libre",
+      "severite": 4,
+      "blocs": [],
+      "resume": "Depuis 2018, un compte suivi par plus de 5 000 personnes est juridiquement assimilé à un média et peut être bloqué par décision administrative du Conseil suprême des médias, sans juge.",
+      "mecanismes": ["cwc", "blocage-fai", "donnees"],
+      "lois": [
+        {
+          "nom": "Loi 175/2018 sur la lutte contre la cybercriminalité",
+          "objet": "Autorise le blocage de tout site ou compte menaçant la sécurité nationale, et impose la conservation des données pendant un an."
+        },
+        {
+          "nom": "Loi 180/2018 sur la régulation de la presse et des médias",
+          "objet": "Assimile à un média tout compte de plus de 5 000 abonnés, ce qui le soumet au contrôle du Conseil suprême des médias."
+        }
+      ],
+      "chronologie": [
+        { "date": "2011-01-25", "texte": "Twitter est coupé au premier jour de la révolution égyptienne, puis c'est l'internet entier pendant cinq jours." },
+        { "date": "2018-09", "texte": "Entrée en vigueur du régime assimilant les comptes suivis à des médias." }
+      ],
+      "chiffresNote": "Volume de demandes faible au regard de la sévérité du cadre : l'Égypte agit surtout par blocage et par poursuites.",
+      "sources": [
+        { "titre": "Association for Freedom of Thought and Expression", "url": "https://afteegypt.org/en" },
+        { "titre": "Freedom House — Égypte", "url": "https://freedomhouse.org/country/egypt/freedom-net" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "NG",
+      "nom": "Nigeria",
+      "region": "Afrique",
+      "acces": "libre",
+      "severite": 3,
+      "blocs": [],
+      "resume": "Le Nigeria a interdit Twitter pendant sept mois en 2021, après que la plateforme eut supprimé un message du président Buhari jugé menaçant. Le service n'a été rétabli qu'après des engagements formels de l'entreprise : bureau local, fiscalité, coopération.",
+      "mecanismes": ["blocage-fai", "representant-local", "retrait-global"],
+      "lois": [
+        {
+          "nom": "Cybercrimes Act 2015, amendé en 2024",
+          "objet": "Pénalise le « cyberharcèlement », défini assez largement pour couvrir la critique politique. Régulièrement contesté devant la Cour de justice de la CEDEAO."
+        },
+        {
+          "nom": "Code de pratique des plateformes (NITDA, 2022)",
+          "objet": "Impose enregistrement local, représentant et retrait sous délai.",
+          "delai": "24 heures"
+        }
+      ],
+      "chronologie": [
+        { "date": "2021-06-05", "texte": "Le gouvernement suspend Twitter après la suppression d'un tweet du président Buhari. Les opérateurs bloquent l'accès." },
+        { "date": "2021-07-14", "texte": "La Cour de justice de la CEDEAO interdit au Nigeria de sanctionner les utilisateurs qui contournent le blocage." },
+        { "date": "2022-01-13", "texte": "Le service est rétabli après l'engagement de X d'ouvrir un bureau local et de se conformer à la fiscalité nigériane." }
+      ],
+      "chiffresNote": "Peu de demandes formelles ; l'action nigériane a été frontale plutôt que procédurale.",
+      "sources": [
+        { "titre": "Paradigm Initiative — Nigeria", "url": "https://paradigmhq.org/" },
+        { "titre": "Cour de justice de la CEDEAO — SERAP c. Nigeria", "url": "https://www.courtecowas.org/" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "MM",
+      "nom": "Myanmar",
+      "region": "Asie",
+      "acces": "bloque",
+      "severite": 5,
+      "blocs": [],
+      "resume": "Bloqué depuis le coup d'État militaire du 1er février 2021. La junte a ordonné aux opérateurs de couper l'accès pour empêcher l'organisation de la contestation, et a depuis criminalisé l'usage des VPN.",
+      "mecanismes": ["blocage-fai"],
+      "lois": [
+        {
+          "nom": "Loi sur la cybersécurité (adoptée en janvier 2025)",
+          "objet": "Rend illégale l'utilisation d'un VPN non autorisé et impose la conservation des données des utilisateurs."
+        },
+        {
+          "nom": "Art. 505A du code pénal (février 2021)",
+          "objet": "Punit de trois ans de prison les publications suscitant la peur ou la « fausse information ». Des centaines de poursuites."
+        }
+      ],
+      "chronologie": [
+        { "date": "2021-02-01", "texte": "Coup d'État militaire." },
+        { "date": "2021-02-05", "texte": "Ordre de blocage de Twitter et Instagram adressé aux opérateurs." }
+      ],
+      "chiffresNote": "Aucune donnée de retrait publiée : la plateforme est simplement inaccessible.",
+      "sources": [
+        { "titre": "NetBlocks — Myanmar", "url": "https://netblocks.org/reports" },
+        { "titre": "Access Now — Myanmar", "url": "https://www.accessnow.org/" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "KP",
+      "nom": "Corée du Nord",
+      "region": "Asie",
+      "acces": "bloque",
+      "severite": 5,
+      "blocs": [],
+      "resume": "L'internet mondial n'est accessible qu'à une élite très réduite ; le reste du pays est sur l'intranet Kwangmyong. X est explicitement bloqué depuis avril 2016 pour les rares utilisateurs concernés — étrangers résidents et cadres autorisés.",
+      "mecanismes": ["blocage-fai"],
+      "lois": [
+        { "nom": "Contrôle administratif de l'accès", "objet": "Pas de cadre publié : l'accès à l'internet mondial est une autorisation individuelle, pas un droit." }
+      ],
+      "chronologie": [
+        { "date": "2016-04-01", "texte": "Blocage officiel de Twitter, Facebook et YouTube, annoncé aux résidents étrangers." }
+      ],
+      "chiffresNote": "Aucune donnée.",
+      "sources": [
+        { "titre": "Reporters sans frontières — Corée du Nord", "url": "https://rsf.org/fr/pays/coree-du-nord" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "TM",
+      "nom": "Turkménistan",
+      "region": "Asie",
+      "acces": "bloque",
+      "severite": 5,
+      "blocs": [],
+      "resume": "Bloqué depuis le début des années 2010, dans l'un des régimes d'accès à l'information les plus fermés du monde. Les VPN sont traqués activement et leur usage peut valoir des ennuis administratifs.",
+      "mecanismes": ["blocage-fai"],
+      "lois": [
+        { "nom": "Contrôle par l'opérateur d'État Turkmentelekom", "objet": "Monopole de fait sur l'accès, filtrage sans base légale publiée ni recours." }
+      ],
+      "chronologie": [
+        { "date": "2010", "texte": "Blocage des principaux réseaux sociaux, dont Twitter." }
+      ],
+      "chiffresNote": "Aucune donnée.",
+      "sources": [
+        { "titre": "Freedom House — Turkménistan", "url": "https://freedomhouse.org/country/turkmenistan/freedom-net" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "VN",
+      "nom": "Viêt Nam",
+      "region": "Asie",
+      "acces": "restreint",
+      "severite": 4,
+      "blocs": [],
+      "resume": "Le service est accessible, mais le décret 147, en vigueur depuis fin 2024, impose l'identification de tous les utilisateurs et le retrait sous 24 heures. Le Viêt Nam a la particularité d'obtenir un taux de conformité élevé des plateformes en menaçant leur accès au marché.",
+      "mecanismes": ["cwc", "retrait-global", "delai", "representant-local"],
+      "lois": [
+        {
+          "nom": "Loi sur la cybersécurité (2018)",
+          "objet": "Impose le stockage local des données et la coopération avec le ministère de la Sécurité publique."
+        },
+        {
+          "nom": "Décret 147/2024 (en vigueur le 25 décembre 2024)",
+          "objet": "Oblige à vérifier l'identité des utilisateurs par numéro de téléphone ou identifiant national, et à retirer les contenus illicites signalés.",
+          "delai": "24 heures, 3 heures pour les cas urgents"
+        },
+        {
+          "nom": "Art. 117 et 331 du code pénal",
+          "objet": "Punissent la « propagande contre l'État » et l'« abus des libertés démocratiques ». Des peines de cinq à dix ans ont été prononcées pour des publications en ligne."
+        }
+      ],
+      "chronologie": [
+        { "date": "2024-12-25", "texte": "Entrée en vigueur du décret 147 : identification obligatoire et délais de retrait raccourcis." }
+      ],
+      "chiffresNote": "Le Viêt Nam figure peu dans les données publiques de X : l'essentiel des demandes passe par des canaux informels avec le ministère de l'Information.",
+      "sources": [
+        { "titre": "Human Rights Watch — Viêt Nam", "url": "https://www.hrw.org/asia/vietnam" },
+        { "titre": "Article 19 — décret 147", "url": "https://www.article19.org/" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "TH",
+      "nom": "Thaïlande",
+      "region": "Asie",
+      "acces": "libre",
+      "severite": 4,
+      "blocs": [],
+      "resume": "La Thaïlande est le seul pays où le motif dominant de retrait est la protection de la monarchie. L'article 112 du code pénal punit de trois à quinze ans de prison toute atteinte au roi, et X y masque des comptes entiers à ce titre.",
+      "mecanismes": ["cwc", "blocage-fai", "delai"],
+      "lois": [
+        {
+          "nom": "Art. 112 du code pénal — lèse-majesté",
+          "objet": "Trois à quinze ans de prison par publication. Les peines cumulées ont dépassé cinquante ans dans certaines affaires."
+        },
+        {
+          "nom": "Computer Crime Act 2007, amendé en 2017",
+          "objet": "Permet au ministère de l'Économie numérique d'obtenir d'un tribunal un ordre de blocage, et oblige les intermédiaires à s'exécuter.",
+          "delai": "7 jours après notification"
+        }
+      ],
+      "chronologie": [
+        { "date": "2020-08", "texte": "Le gouvernement demande le blocage de milliers de contenus pendant le mouvement de contestation étudiant ; X masque plusieurs comptes en Thaïlande." }
+      ],
+      "chiffresNote": "113 demandes légales visant 476 comptes entre 2012 et 2020, et aucun post masqué sur la période : la Thaïlande obtient surtout des blocages en amont, chez les opérateurs, plutôt que des retraits par X.",
+      "sources": [
+        { "titre": "iLaw — Thaïlande", "url": "https://freedom.ilaw.or.th/en" },
+        { "titre": "X Transparency Center — Thaïlande", "url": "https://transparency.x.com/en/reports/countries/th" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "SG",
+      "nom": "Singapour",
+      "region": "Asie",
+      "acces": "libre",
+      "severite": 3,
+      "blocs": [],
+      "resume": "Singapour a inventé un outil intermédiaire entre le retrait et le laisser-passer : l'ordre de correction. Le contenu reste en ligne, mais s'affiche accompagné d'un avis gouvernemental affirmant qu'il est faux. X a exécuté plusieurs de ces ordres.",
+      "mecanismes": ["cwc", "retrait-global", "etiquetage", "delai"],
+      "lois": [
+        {
+          "nom": "POFMA — Protection from Online Falsehoods and Manipulation Act (2019)",
+          "objet": "Un ministre peut ordonner à une plateforme d'apposer un avis de correction sur une publication, de la retirer, ou de couper l'accès au compte.",
+          "delai": "généralement le jour même"
+        },
+        {
+          "nom": "Online Criminal Harms Act (2023)",
+          "objet": "Étend les ordres de retrait aux escroqueries et aux infractions en ligne, sans passer par un juge."
+        },
+        {
+          "nom": "Broadcasting (Online Communication Services) Act (2023)",
+          "objet": "Permet d'imposer des codes de conduite aux services accessibles depuis Singapour, sous peine de blocage."
+        }
+      ],
+      "chronologie": [
+        { "date": "2019-10-02", "texte": "Entrée en vigueur de POFMA ; les premiers ordres de correction suivent en novembre." }
+      ],
+      "chiffresNote": "Sept demandes légales seulement sur toute la période 2012-2020 : l'essentiel de l'action singapourienne passe par les ordres de correction de POFMA, qui ne sont pas comptés comme des demandes de retrait dans les rapports de X.",
+      "sources": [
+        { "titre": "POFMA Office", "url": "https://www.pofmaoffice.gov.sg/" },
+        { "titre": "X Transparency Center — Singapour", "url": "https://transparency.x.com/en/reports/countries/sg" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "MY",
+      "nom": "Malaisie",
+      "region": "Asie",
+      "acces": "restreint",
+      "severite": 4,
+      "blocs": [],
+      "resume": "Depuis le 1er janvier 2025, toute plateforme de plus de huit millions d'utilisateurs malaisiens doit détenir une licence. X a soutenu être sous ce seuil, ce que le régulateur conteste — le service opère donc dans une zone grise, sous menace de blocage.",
+      "mecanismes": ["cwc", "retrait-global", "blocage-fai", "representant-local"],
+      "lois": [
+        {
+          "nom": "Communications and Multimedia Act 1998, art. 233",
+          "objet": "Pénalise les communications « offensantes ou menaçantes ». Base des poursuites individuelles et des demandes de retrait."
+        },
+        {
+          "nom": "Régime de licence des services de messagerie et réseaux sociaux (2025)",
+          "objet": "Licence obligatoire au-delà de huit millions d'utilisateurs, avec obligations de modération et de coopération."
+        },
+        {
+          "nom": "Sedition Act 1948",
+          "objet": "Toujours en vigueur ; couvre notamment la critique des sultans et les sujets ethniques et religieux."
+        }
+      ],
+      "chronologie": [
+        { "date": "2025-01-01", "texte": "Entrée en vigueur du régime de licence. X ne figure pas parmi les titulaires." },
+        { "date": "2026-01", "texte": "Restriction de l'outil Grok de X, accusé de produire des images truquées à caractère sexuel." }
+      ],
+      "chiffresNote": "Volume modéré, en hausse continue depuis 2018.",
+      "sources": [
+        { "titre": "MCMC", "url": "https://www.mcmc.gov.my/" },
+        { "titre": "X Transparency Center — Malaisie", "url": "https://transparency.x.com/en/reports/countries/my" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "IL",
+      "nom": "Israël",
+      "region": "Moyen-Orient",
+      "acces": "libre",
+      "severite": 3,
+      "blocs": [],
+      "resume": "La particularité israélienne est l'unité cyber du parquet : elle adresse aux plateformes des demandes de retrait présentées comme volontaires, hors de toute procédure judiciaire, ce qui les fait échapper aux statistiques de demandes légales. La Cour suprême a validé cette pratique en 2021.",
+      "mecanismes": ["retrait-global", "cwc", "donnees"],
+      "lois": [
+        {
+          "nom": "Unité cyber du parquet de l'État (depuis 2015)",
+          "objet": "Signale aux plateformes des contenus jugés illicites en leur demandant d'appliquer leurs propres règles. Taux d'exécution rapporté supérieur à 90 %."
+        },
+        {
+          "nom": "Ordonnances de silence judiciaires (gag orders)",
+          "objet": "Interdisent la publication d'informations sur une enquête. X a déjà rendu des contenus inaccessibles en Israël à ce titre."
+        },
+        {
+          "nom": "Loi antiterroriste 2016",
+          "objet": "Pénalise l'incitation au terrorisme et le soutien à une organisation interdite, y compris par une publication en ligne."
+        }
+      ],
+      "chronologie": [
+        { "date": "2016", "texte": "Des billets du journaliste Richard Silverstein sont rendus inaccessibles en Israël à la demande du ministère de la Justice, au titre d'une ordonnance de silence." },
+        { "date": "2021-04-12", "texte": "La Cour suprême rejette le recours d'Adalah et de l'ACRI contre l'unité cyber, jugeant que ses demandes ne constituent pas un acte administratif contraignant." }
+      ],
+      "chiffresNote": "Les chiffres publics sous-estiment l'activité israélienne : les demandes de l'unité cyber ne sont pas des demandes légales au sens des rapports de X.",
+      "sources": [
+        { "titre": "Adalah — recours contre l'unité cyber", "url": "https://www.adalah.org/en/content/view/9245" },
+        { "titre": "X Transparency Center — Israël", "url": "https://transparency.x.com/en/reports/countries/il" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "UA",
+      "nom": "Ukraine",
+      "region": "Europe",
+      "acces": "libre",
+      "severite": 3,
+      "blocs": ["coe"],
+      "resume": "Sous loi martiale depuis février 2022, l'Ukraine bloque les médias russes et les comptes qui relaient la propagande de guerre. Les demandes passent par le SBU et par le Conseil de sécurité nationale, avec un contrôle judiciaire réduit du fait de l'état de guerre.",
+      "mecanismes": ["cwc", "blocage-fai", "retrait-global"],
+      "lois": [
+        {
+          "nom": "Loi sur les sanctions (2014)",
+          "objet": "Permet au président de bloquer par décret l'accès à des services et à des comptes, sur proposition du Conseil de sécurité nationale."
+        },
+        {
+          "nom": "Régime de loi martiale (depuis le 24 février 2022)",
+          "objet": "Autorise des restrictions étendues à la diffusion d'informations sur les mouvements de troupes et les frappes."
+        }
+      ],
+      "chronologie": [
+        { "date": "2017-05-16", "texte": "Décret bloquant VKontakte, Odnoklassniki et Yandex ; X n'est pas visé, mais le précédent est posé." },
+        { "date": "2022-02-24", "texte": "Instauration de la loi martiale ; les demandes de retrait visant les contenus prorusses augmentent fortement." }
+      ],
+      "chiffresNote": "Volume en forte hausse depuis 2022, au-delà de la période couverte par les données publiques de X.",
+      "sources": [
+        { "titre": "Freedom House — Ukraine", "url": "https://freedomhouse.org/country/ukraine/freedom-net" },
+        { "titre": "X Transparency Center — Ukraine", "url": "https://transparency.x.com/en/reports/countries/ua" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "BY",
+      "nom": "Biélorussie",
+      "region": "Europe",
+      "acces": "restreint",
+      "severite": 5,
+      "blocs": [],
+      "resume": "Coupures répétées depuis les manifestations de 2020, et un arsenal qui permet de qualifier un simple abonnement à une chaîne d'opposition de participation à une organisation extrémiste. Le ministère de l'Information peut bloquer un site sans juge.",
+      "mecanismes": ["blocage-fai", "ralentissement"],
+      "lois": [
+        {
+          "nom": "Loi sur les médias (2018, durcie en 2021)",
+          "objet": "Permet au ministère de l'Information de bloquer une ressource en ligne sans décision de justice."
+        },
+        {
+          "nom": "Législation antiextrémiste",
+          "objet": "Le classement d'un média ou d'un compte comme « formation extrémiste » rend punissable le fait de le suivre ou de le relayer."
+        }
+      ],
+      "chronologie": [
+        { "date": "2020-08-09", "texte": "Coupure quasi totale de l'internet pendant trois jours autour de l'élection présidentielle." }
+      ],
+      "chiffresNote": "Aucune donnée publiée par X pour la Biélorussie sur la période 2012-2020.",
+      "sources": [
+        { "titre": "NetBlocks — Biélorussie", "url": "https://netblocks.org/reports" },
+        { "titre": "Human Constanta", "url": "https://humanconstanta.org/en/" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "IE",
+      "nom": "Irlande",
+      "region": "Europe",
+      "acces": "libre",
+      "severite": 2,
+      "blocs": ["ue", "coe"],
+      "resume": "L'Irlande occupe une place à part : le siège européen de X est à Dublin, ce qui fait de Coimisiún na Meán le coordinateur pour les services numériques compétent au premier chef pour X dans toute l'Union. C'est aussi le régulateur de la protection des données qui suit X pour l'ensemble de l'Europe.",
+      "mecanismes": ["retrait-global", "amendes", "delai"],
+      "lois": [
+        {
+          "nom": "Online Safety and Media Regulation Act 2022",
+          "objet": "Crée Coimisiún na Meán et un code de sécurité en ligne applicable aux plateformes établies en Irlande."
+        },
+        {
+          "nom": "Rôle de coordinateur pour les services numériques (DSA)",
+          "objet": "L'Irlande instruit en première ligne les plaintes visant X dans l'Union, en coopération avec la Commission européenne."
+        },
+        {
+          "nom": "Incitement to Violence or Hatred and Hate Offences Act 2024",
+          "objet": "Pénalise l'incitation à la haine, y compris en ligne."
+        }
+      ],
+      "chronologie": [
+        { "date": "2024-11", "texte": "Le code de sécurité en ligne irlandais entre en application pour les plateformes de partage de vidéos établies en Irlande." },
+        { "date": "2025-04", "texte": "La Data Protection Commission ouvre une enquête sur l'utilisation par X des publications d'utilisateurs européens pour entraîner Grok." }
+      ],
+      "chiffresNote": "Très peu de demandes de retrait : l'action irlandaise est réglementaire, pas contentieuse pièce par pièce.",
+      "sources": [
+        { "titre": "Coimisiún na Meán", "url": "https://www.cnam.ie/" },
+        { "titre": "Data Protection Commission", "url": "https://www.dataprotection.ie/" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "IT",
+      "nom": "Italie",
+      "region": "Europe",
+      "acces": "libre",
+      "severite": 2,
+      "blocs": ["ue", "coe"],
+      "resume": "Cadre européen, avec deux spécificités : l'AGCOM dispose d'un pouvoir de retrait rapide en matière de droit d'auteur, et depuis 2025 la vérification d'âge pour les contenus pour adultes est imposée par décret.",
+      "mecanismes": ["retrait-global", "age", "delai"],
+      "lois": [
+        {
+          "nom": "Règlement AGCOM sur le droit d'auteur en ligne",
+          "objet": "Permet un retrait administratif rapide, sans juge, pour la contrefaçon.",
+          "delai": "de 3 à 12 jours ; 30 minutes pour la retransmission sportive en direct via la plateforme Piracy Shield"
+        },
+        {
+          "nom": "Décret Caivano (2023) et délibération AGCOM 96/25/CONS",
+          "objet": "Imposent une vérification d'âge certifiée pour l'accès aux contenus pornographiques, applicable depuis novembre 2025."
+        },
+        {
+          "nom": "Loi Mancino (1993)",
+          "objet": "Pénalise la propagande raciste et l'incitation à la haine."
+        }
+      ],
+      "chronologie": [
+        { "date": "2025-11-12", "texte": "Entrée en application de la vérification d'âge certifiée par tiers pour les sites et services diffusant du contenu pornographique." }
+      ],
+      "chiffresNote": "Volume modéré, essentiellement judiciaire.",
+      "sources": [
+        { "titre": "AGCOM", "url": "https://www.agcom.it/" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "ES",
+      "nom": "Espagne",
+      "region": "Europe",
+      "acces": "libre",
+      "severite": 2,
+      "blocs": ["ue", "coe"],
+      "resume": "Cadre européen. Deux points sensibles propres à l'Espagne : le délit d'apologie du terrorisme et d'humiliation des victimes, qui a valu des condamnations pour de simples tweets, et l'injure à la Couronne.",
+      "mecanismes": ["retrait-global", "donnees"],
+      "lois": [
+        {
+          "nom": "Art. 578 du code pénal — apologie du terrorisme",
+          "objet": "A fondé plusieurs condamnations pour des messages publiés sur Twitter, dont l'affaire Cassandra Vera, finalement acquittée par le Tribunal suprême en 2018."
+        },
+        {
+          "nom": "Art. 490.3 du code pénal — injures à la Couronne",
+          "objet": "Peine de prison possible pour l'outrage au roi."
+        },
+        {
+          "nom": "LSSI-CE (2002)",
+          "objet": "Régime d'hébergeur et retrait sur notification d'une autorité compétente."
+        }
+      ],
+      "chronologie": [
+        { "date": "2018-03-01", "texte": "Le Tribunal suprême acquitte Cassandra Vera, condamnée en première instance pour des plaisanteries sur l'attentat contre Carrero Blanco." }
+      ],
+      "chiffresNote": "Volume modéré.",
+      "sources": [
+        { "titre": "Rights International Spain", "url": "https://rightsinternationalspain.org/" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "CA",
+      "nom": "Canada",
+      "region": "Amériques",
+      "acces": "libre",
+      "severite": 1,
+      "blocs": [],
+      "resume": "Régime proche des États-Unis, avec une Charte qui protège l'expression mais admet des limites raisonnables : la propagande haineuse est une infraction criminelle. Le projet de loi sur les préjudices en ligne, qui aurait créé un régulateur, est mort au feuilleton en janvier 2025.",
+      "mecanismes": ["retrait-global", "donnees"],
+      "lois": [
+        {
+          "nom": "Code criminel, art. 318-320",
+          "objet": "Punissent la propagande haineuse et permettent la saisie de matériel de propagande."
+        },
+        {
+          "nom": "Charte canadienne des droits et libertés, art. 2b et 1",
+          "objet": "Protège l'expression sous réserve de limites raisonnables prescrites par une règle de droit."
+        }
+      ],
+      "chronologie": [
+        { "date": "2024-02-26", "texte": "Dépôt du projet de loi C-63 sur les préjudices en ligne." },
+        { "date": "2025-01-06", "texte": "Prorogation du Parlement : C-63 meurt au feuilleton sans avoir été adopté." }
+      ],
+      "chiffresNote": "Volume faible.",
+      "sources": [
+        { "titre": "Parlement du Canada — C-63", "url": "https://www.parl.ca/legisinfo/fr/projet-de-loi/44-1/c-63" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "MX",
+      "nom": "Mexique",
+      "region": "Amériques",
+      "acces": "libre",
+      "severite": 2,
+      "blocs": [],
+      "resume": "Pas de régime de retrait administratif : l'essentiel passe par la justice civile, souvent en diffamation. Le risque réel pour l'expression au Mexique n'est pas le retrait mais la violence contre les journalistes, et la surveillance — le pays a été un client majeur du logiciel espion Pegasus.",
+      "mecanismes": ["retrait-global", "donnees"],
+      "lois": [
+        {
+          "nom": "Loi fédérale de télécommunications et de radiodiffusion (2014)",
+          "objet": "Conservation des données de communication pendant deux ans et accès des autorités."
+        },
+        {
+          "nom": "« Ley Olimpia » (2021)",
+          "objet": "Criminalise la diffusion d'images intimes sans consentement, avec obligation de retrait rapide."
+        }
+      ],
+      "chronologie": [
+        { "date": "2021", "texte": "Généralisation de la Ley Olimpia à l'ensemble des États fédérés." }
+      ],
+      "chiffresNote": "Volume faible au regard de la population.",
+      "sources": [
+        { "titre": "R3D — Red en Defensa de los Derechos Digitales", "url": "https://r3d.mx/" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "AR",
+      "nom": "Argentine",
+      "region": "Amériques",
+      "acces": "libre",
+      "severite": 1,
+      "blocs": [],
+      "resume": "Protection forte de l'expression. La Cour suprême a posé en 2014, dans l'arrêt Rodríguez c. Google, qu'un intermédiaire n'est responsable qu'après notification d'une illicéité manifeste — et qu'un juge est nécessaire pour le reste.",
+      "mecanismes": ["retrait-global"],
+      "lois": [
+        {
+          "nom": "Arrêt Rodríguez, María Belén c. Google (CSJN, 2014)",
+          "objet": "Fixe le régime de responsabilité des intermédiaires : pas de surveillance générale, retrait sur ordre judiciaire sauf illicéité manifeste."
+        },
+        {
+          "nom": "Loi 26.032 (2005)",
+          "objet": "Étend à l'internet la protection constitutionnelle de la liberté d'expression."
+        }
+      ],
+      "chronologie": [
+        { "date": "2014-10-28", "texte": "La Cour suprême rend l'arrêt Rodríguez, référence régionale sur la responsabilité des plateformes." }
+      ],
+      "chiffresNote": "Volume faible.",
+      "sources": [
+        { "titre": "CSJN — Rodríguez c. Google", "url": "https://sbdop.csjn.gov.ar/sbdop/" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "CH",
+      "nom": "Suisse",
+      "region": "Europe",
+      "acces": "libre",
+      "severite": 1,
+      "blocs": ["coe"],
+      "resume": "Pas de loi sur les plateformes : le Conseil fédéral a mis en consultation un projet inspiré du DSA en 2025, sans l'avoir adopté. Les retraits reposent sur le droit pénal ordinaire et sur le juge civil.",
+      "mecanismes": ["retrait-global", "donnees"],
+      "lois": [
+        {
+          "nom": "Art. 261 bis du code pénal — discrimination et incitation à la haine",
+          "objet": "Étendu en 2020 à l'orientation sexuelle. Base pénale des retraits demandés en Suisse."
+        },
+        {
+          "nom": "Art. 28 du code civil — protection de la personnalité",
+          "objet": "Permet d'obtenir en référé le retrait d'un contenu attentatoire."
+        }
+      ],
+      "chronologie": [
+        { "date": "2025", "texte": "Mise en consultation d'un avant-projet de loi sur les plateformes de communication, inspiré du DSA." }
+      ],
+      "chiffresNote": "Volume très faible.",
+      "sources": [
+        { "titre": "OFCOM — régulation des plateformes", "url": "https://www.bakom.admin.ch/" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "PL",
+      "nom": "Pologne",
+      "region": "Europe",
+      "acces": "libre",
+      "severite": 2,
+      "blocs": ["ue", "coe"],
+      "resume": "Cadre européen. La Pologne a longtemps travaillé à un texte inverse des autres : une loi « de liberté d'expression » qui aurait interdit aux plateformes de retirer des contenus licites, avec un conseil de recours. Le projet n'a jamais abouti.",
+      "mecanismes": ["retrait-global"],
+      "lois": [
+        {
+          "nom": "Loi sur la fourniture de services par voie électronique (2002)",
+          "objet": "Régime d'hébergeur : retrait après notification d'une information fiable sur l'illicéité."
+        },
+        {
+          "nom": "Projet de loi sur la protection de la liberté d'expression en ligne (2021, abandonné)",
+          "objet": "Aurait créé un conseil de la liberté d'expression pouvant ordonner le rétablissement d'un contenu retiré par la plateforme."
+        }
+      ],
+      "chronologie": [
+        { "date": "2021-01", "texte": "Présentation du projet polonais contre la « censure » des plateformes ; il n'est jamais adopté." }
+      ],
+      "chiffresNote": "Volume faible.",
+      "sources": [
+        { "titre": "Panoptykon Foundation", "url": "https://en.panoptykon.org/" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "AT",
+      "nom": "Autriche",
+      "region": "Europe",
+      "acces": "libre",
+      "severite": 2,
+      "blocs": ["ue", "coe"],
+      "resume": "L'Autriche avait sa propre loi de retrait sous délai, le KoPl-G, avant d'être rattrapée par le DSA. Elle a surtout produit un arrêt majeur : la Cour de justice de l'Union a jugé en 2019 qu'un juge autrichien pouvait ordonner un retrait mondial.",
+      "mecanismes": ["retrait-global", "delai"],
+      "lois": [
+        {
+          "nom": "Kommunikationsplattformen-Gesetz (2021), abrogé en 2024",
+          "objet": "Imposait un retrait en 24 heures des contenus manifestement illégaux ; remplacé par le régime DSA."
+        },
+        {
+          "nom": "Verbotsgesetz (1947)",
+          "objet": "Interdit toute activité national-socialiste, y compris en ligne."
+        }
+      ],
+      "chronologie": [
+        { "date": "2019-10-03", "texte": "Dans Glawischnig-Piesczek c. Facebook, la Cour de justice de l'Union juge qu'un juge national peut ordonner le retrait mondial d'un contenu illicite et de ses équivalents." }
+      ],
+      "chiffresNote": "Volume faible.",
+      "sources": [
+        { "titre": "CJUE — C-18/18 Glawischnig-Piesczek", "url": "https://curia.europa.eu/juris/liste.jsf?num=C-18/18" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "KZ",
+      "nom": "Kazakhstan",
+      "region": "Asie",
+      "acces": "restreint",
+      "severite": 4,
+      "blocs": [],
+      "resume": "Coupures répétées lors des mouvements sociaux, et une loi de 2023 qui impose aux grandes plateformes un représentant local, sous peine de blocage. Le pays a aussi tenté d'imposer un certificat de sécurité permettant d'intercepter le trafic chiffré.",
+      "mecanismes": ["blocage-fai", "ralentissement", "representant-local", "delai"],
+      "lois": [
+        {
+          "nom": "Loi sur la protection des droits de l'enfant en ligne (2023)",
+          "objet": "Impose un représentant légal au Kazakhstan aux plateformes de plus de 100 000 utilisateurs, sous peine de blocage.",
+          "delai": "24 heures pour retirer un contenu signalé"
+        },
+        {
+          "nom": "Loi sur les communications, art. 41-1",
+          "objet": "Permet la suspension des réseaux sur décision du procureur général, sans juge."
+        }
+      ],
+      "chronologie": [
+        { "date": "2022-01-05", "texte": "Coupure nationale de l'internet pendant les émeutes de janvier ; X est inaccessible plusieurs jours." }
+      ],
+      "chiffresNote": "Volume faible dans les données publiques.",
+      "sources": [
+        { "titre": "NetBlocks — Kazakhstan", "url": "https://netblocks.org/reports" }
+      ],
+      "verifieLe": "2026-08-15"
+    },
+
+    {
+      "code": "AZ",
+      "nom": "Azerbaïdjan",
+      "region": "Asie",
+      "acces": "restreint",
+      "severite": 4,
+      "blocs": ["coe"],
+      "resume": "Blocages et ralentissements lors des épisodes militaires et des mouvements de contestation. La loi sur les médias de 2022 a étendu le contrôle aux publications en ligne.",
+      "mecanismes": ["blocage-fai", "ralentissement"],
+      "lois": [
+        {
+          "nom": "Loi sur les médias (2022)",
+          "objet": "Impose un registre des acteurs des médias et des obligations de contenu, applicables aux publications en ligne."
+        },
+        {
+          "nom": "Loi sur l'information (art. 13-3)",
+          "objet": "Permet le blocage d'une ressource en ligne par décision administrative en cas d'urgence, avec confirmation judiciaire ultérieure."
+        }
+      ],
+      "chronologie": [
+        { "date": "2020-09-27", "texte": "Restriction des réseaux sociaux, dont Twitter, dès le début de la guerre du Haut-Karabagh." }
+      ],
+      "chiffresNote": "Volume faible.",
+      "sources": [
+        { "titre": "NetBlocks — Azerbaïdjan", "url": "https://netblocks.org/reports" }
+      ],
+      "verifieLe": "2026-08-15"
+    }
+  ]
+}

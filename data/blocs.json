@@ -1,0 +1,50 @@
+{
+  "ue": {
+    "id": "ue",
+    "nom": "Union européenne — règlement sur les services numériques (DSA)",
+    "resume": "Depuis le 25 août 2023, X est une « très grande plateforme en ligne » au sens du DSA. Le règlement n'interdit pas de contenus par lui-même : il oblige X à retirer ce qui est illégal dans chaque État membre dès qu'il en est informé, à motiver chaque retrait auprès de l'auteur, et à ouvrir un recours interne. Ce sont les droits nationaux qui définissent l'illégalité ; le DSA définit la procédure.",
+    "points": [
+      "Injonctions d'agir (art. 9) : une autorité nationale — juge ou administration — peut ordonner le retrait d'un contenu précis, et X doit rendre compte de la suite donnée.",
+      "Signaleurs de confiance (art. 22) : leurs signalements passent en priorité. Les États membres les désignent.",
+      "Motivation obligatoire (art. 17) : tout retrait ou restriction doit être expliqué à l'auteur, et versé à la base publique DSA Transparency Database.",
+      "Recours interne gratuit (art. 20) pendant six mois, puis règlement extrajudiciaire des litiges (art. 21).",
+      "Sanction possible : jusqu'à 6 % du chiffre d'affaires mondial."
+    ],
+    "chronologie": [
+      { "date": "2023-04-25", "texte": "X est désigné très grande plateforme en ligne par la Commission européenne." },
+      { "date": "2023-12-18", "texte": "La Commission ouvre une procédure formelle contre X : diffusion de contenus illégaux, manipulation de l'information, interfaces trompeuses, accès des chercheurs aux données." },
+      { "date": "2025-12-05", "texte": "Première décision de non-conformité du DSA : 120 millions d'euros d'amende contre X pour le badge bleu payant présenté comme une vérification, un registre publicitaire inexploitable et le refus d'accès aux données des chercheurs. Le volet « contenus illégaux » de l'enquête reste ouvert." }
+    ],
+    "autresTextes": [
+      {
+        "nom": "Règlement TCO 2021/784 — contenus terroristes",
+        "detail": "Une autorité de n'importe quel État membre peut ordonner le retrait d'un contenu terroriste dans toute l'Union. Délai : une heure."
+      },
+      {
+        "nom": "Sanctions du Conseil (mars 2022)",
+        "detail": "RT, Sputnik et leurs déclinaisons sont interdits de diffusion dans l'UE. X a rendu 38 comptes affiliés inaccessibles depuis les pays de l'Union."
+      },
+      {
+        "nom": "Règlement 2024/900 sur la publicité politique",
+        "detail": "Plutôt que de s'y conformer, X a annoncé cesser toute publicité politique dans l'Union à partir d'octobre 2025."
+      }
+    ],
+    "sources": [
+      { "titre": "Règlement (UE) 2022/2065 (DSA)", "url": "https://eur-lex.europa.eu/eli/reg/2022/2065/oj" },
+      { "titre": "Commission européenne — décision de non-conformité contre X (5 décembre 2025)", "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_25_2820" },
+      { "titre": "DSA Transparency Database", "url": "https://transparency.dsa.ec.europa.eu/" }
+    ]
+  },
+  "coe": {
+    "id": "coe",
+    "nom": "Conseil de l'Europe — Convention européenne des droits de l'homme",
+    "resume": "L'article 10 protège la liberté d'expression dans les 46 États parties. Il n'empêche pas les retraits, mais impose qu'ils soient prévus par la loi, nécessaires et proportionnés. La Cour de Strasbourg a condamné plusieurs fois les blocages massifs de plateformes, notamment turcs (Ahmet Yıldırım c. Turquie, 2012 ; Cengiz et autres c. Turquie, 2015).",
+    "points": [
+      "Un blocage général d'une plateforme entière est presque toujours jugé disproportionné.",
+      "Le recours effectif (art. 13) suppose qu'un utilisateur puisse contester le retrait devant un juge."
+    ],
+    "sources": [
+      { "titre": "CEDH — Cengiz et autres c. Turquie (2015)", "url": "https://hudoc.echr.coe.int/eng?i=001-159188" }
+    ]
+  }
+}

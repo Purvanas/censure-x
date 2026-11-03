@@ -1,0 +1,75 @@
+{
+  "_lisezMoi": "Vocabulaire des moyens par lesquels un contenu disparaît, ou devient inaccessible, dans un pays donné. Chaque fiche pays y renvoie.",
+
+  "mecanismes": {
+    "cwc": {
+      "id": "cwc",
+      "nom": "Masquage par pays",
+      "sigle": "Country Withheld Content",
+      "definition": "Le post ou le compte reste en ligne et visible depuis le reste du monde, mais devient inaccessible depuis le pays qui l'a demandé. À la place s'affiche un bandeau indiquant que le contenu a été retenu pour raison légale.",
+      "detail": "C'est l'outil le plus caractéristique de X. Il a été utilisé pour la première fois le 18 octobre 2012, en Allemagne, contre un compte néonazi. Sa logique est un compromis assumé : obéir localement sans céder globalement. Sa critique est la même : il permet à X de rester présent dans des pays où il devrait peut-être refuser.",
+      "visible": true
+    },
+    "retrait-global": {
+      "id": "retrait-global",
+      "nom": "Retrait global",
+      "definition": "Le contenu est supprimé pour tout le monde, partout. C'est ce qui se passe quand X estime qu'il enfreint ses propres règles, ou quand une décision de justice l'ordonne sans limite territoriale.",
+      "visible": true
+    },
+    "etiquetage": {
+      "id": "etiquetage",
+      "nom": "Étiquetage imposé",
+      "definition": "Le contenu reste accessible mais s'affiche accompagné d'un avertissement exigé par une autorité. Singapour en a fait un instrument juridique à part entière avec ses ordres de correction.",
+      "visible": true
+    },
+    "blocage-fai": {
+      "id": "blocage-fai",
+      "nom": "Blocage par les opérateurs",
+      "definition": "Ce n'est plus X qui retire : ce sont les fournisseurs d'accès du pays qui rendent le service injoignable, sur ordre de l'État. X n'a aucun moyen d'y remédier, et les utilisateurs se rabattent sur les VPN.",
+      "visible": false
+    },
+    "ralentissement": {
+      "id": "ralentissement",
+      "nom": "Ralentissement",
+      "definition": "Le service n'est pas coupé, il est rendu si lent qu'on l'abandonne. Technique introduite par la Russie contre Twitter en mars 2021, et depuis inscrite dans la loi turque comme sanction graduée.",
+      "detail": "Son intérêt pour un gouvernement est politique : un blocage se voit et se dénonce, un ralentissement passe pour une panne.",
+      "visible": false
+    },
+    "age": {
+      "id": "age",
+      "nom": "Vérification d'âge",
+      "definition": "Une partie du service est fermée tant que l'utilisateur n'a pas prouvé son âge — par pièce d'identité, selfie ou estimation automatique. Ce n'est pas un retrait de contenu, mais une restriction d'accès imposée par la loi.",
+      "visible": true
+    },
+    "donnees": {
+      "id": "donnees",
+      "nom": "Remise de données",
+      "definition": "L'État ne demande pas de retirer un contenu mais d'identifier son auteur. C'est la contrepartie discrète de la censure : elle ne fait rien disparaître, elle expose une personne.",
+      "visible": false
+    },
+    "representant-local": {
+      "id": "representant-local",
+      "nom": "Représentant légal obligatoire",
+      "definition": "La loi exige que X ait sur place une personne joignable et responsable. C'est un levier redoutable : sans représentant, le pays peut couper le service — c'est ce qui a valu au Brésil quarante jours sans X.",
+      "visible": false
+    },
+    "delai": {
+      "id": "delai",
+      "nom": "Délai légal de retrait",
+      "definition": "La loi fixe un temps au bout duquel le contenu doit avoir disparu : 36 heures en Inde, 24 heures dans plusieurs pays, une heure pour le contenu terroriste dans l'Union européenne. Plus le délai est court, moins l'examen est possible — c'est l'argument qui a fait tomber la loi Avia en France.",
+      "visible": false
+    },
+    "amendes": {
+      "id": "amendes",
+      "nom": "Sanction financière",
+      "definition": "Le pays ne retire rien lui-même : il rend le refus coûteux. Le DSA plafonne à 6 % du chiffre d'affaires mondial ; l'Online Safety Act britannique à 10 %.",
+      "visible": false
+    }
+  },
+
+  "acces": {
+    "libre": { "nom": "Accessible", "definition": "Le service fonctionne normalement. Des contenus peuvent y être retirés ou masqués, mais la plateforme elle-même n'est pas entravée." },
+    "restreint": { "nom": "Accès entravé", "definition": "Le service est atteignable mais dégradé : coupures récurrentes, ralentissement, restrictions d'accès imposées par la loi, ou statut juridique précaire." },
+    "bloque": { "nom": "Bloqué", "definition": "Le service est inaccessible depuis le pays sans contournement." }
+  }
+}

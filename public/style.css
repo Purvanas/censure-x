@@ -1,0 +1,313 @@
+/* censureX — feuille unique, sans build. Sombre par défaut : le sujet l'est aussi. */
+
+:root {
+  --fond: #0b0d10;
+  --fond-2: #12161b;
+  --fond-3: #191f26;
+  --bord: #232b34;
+  --bord-vif: #35404c;
+  --texte: #e6ebf1;
+  --texte-2: #a3aebc;
+  --texte-3: #6f7d8d;
+
+  --libre: #3fa971;
+  --restreint: #d9932f;
+  --bloque: #e0483a;
+  --accent: #5b9dd9;
+
+  --r: 12px;
+  --max: 1080px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--texte);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: #86bcef; }
+
+.dedans { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+/* ------------------------------------------------------------------ entête */
+
+.entete {
+  position: sticky; top: 0; z-index: 20;
+  background: rgba(11, 13, 16, .88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--bord);
+}
+.entete .dedans {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; height: 60px; flex-wrap: wrap;
+}
+.marque {
+  display: flex; align-items: center; gap: 10px;
+  color: var(--texte); text-decoration: none;
+}
+.marque-glyphe { font-size: 22px; line-height: 1; }
+.marque strong { display: block; font-size: 15px; letter-spacing: .01em; }
+.marque em { display: block; font-size: 12px; font-style: normal; color: var(--texte-3); }
+
+.nav { display: flex; gap: 4px; }
+.nav button {
+  background: none; border: 0; color: var(--texte-2);
+  font: inherit; font-size: 14px; padding: 7px 12px;
+  border-radius: 8px; cursor: pointer;
+}
+.nav button:hover { background: var(--fond-2); color: var(--texte); }
+.nav button.actif { background: var(--fond-3); color: var(--texte); }
+
+/* -------------------------------------------------------------------- vues */
+
+main { max-width: var(--max); margin: 0 auto; padding: 34px 20px 60px; }
+
+h1 { font-size: clamp(24px, 4vw, 33px); line-height: 1.22; margin: 0 0 12px; letter-spacing: -.015em; }
+h2 { font-size: 19px; margin: 34px 0 12px; letter-spacing: -.01em; }
+h3 { font-size: 15px; margin: 0 0 6px; }
+
+.chapo { color: var(--texte-2); max-width: 62ch; margin: 0 0 26px; font-size: 16.5px; }
+
+/* --------------------------------------------------------------- recherche */
+
+.recherche { display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
+.recherche input {
+  flex: 1 1 260px;
+  background: var(--fond-2); border: 1px solid var(--bord-vif); color: var(--texte);
+  border-radius: 10px; padding: 12px 14px; font: inherit;
+}
+.recherche input:focus { outline: 2px solid var(--accent); outline-offset: -1px; border-color: transparent; }
+.recherche input::placeholder { color: var(--texte-3); }
+
+.ici {
+  background: var(--fond-3); border: 1px solid var(--bord-vif); color: var(--texte);
+  border-radius: 10px; padding: 0 16px; font: inherit; font-size: 14px; cursor: pointer;
+}
+.ici:hover { border-color: var(--accent); }
+
+.filtres { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
+.filtres button {
+  background: none; border: 1px solid var(--bord); color: var(--texte-2);
+  border-radius: 999px; padding: 5px 12px; font: inherit; font-size: 13px; cursor: pointer;
+}
+.filtres button:hover { border-color: var(--bord-vif); color: var(--texte); }
+.filtres button.actif { background: var(--fond-3); border-color: var(--bord-vif); color: var(--texte); }
+.erreur-chargement {
+  color: #ff9b8d; background: color-mix(in srgb, var(--bloque) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--bloque) 35%, transparent);
+  border-radius: 8px; padding: 9px 12px; margin: -4px 0 14px; font-size: 13px;
+}
+
+/* ---------------------------------------------------------------- la carte */
+
+.carte-bloc {
+  background: var(--fond-2); border: 1px solid var(--bord);
+  border-radius: var(--r); padding: 16px 18px 12px; margin: 4px 0 22px;
+}
+.carte-tete {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 12px; flex-wrap: wrap; margin-bottom: 12px;
+}
+.carte-tete h2 { margin: 0; font-size: 16px; }
+
+.legende { display: flex; flex-wrap: wrap; gap: 4px 12px; }
+.legende .cle { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--texte-2); cursor: help; }
+.legende .cle i { width: 11px; height: 11px; border-radius: 3px; display: inline-block; }
+
+.carte-cadre { position: relative; }
+#carte { width: 100%; height: auto; display: block; }
+#carte path { stroke: var(--fond); stroke-width: .6; vector-effect: non-scaling-stroke; }
+#carte path.cliquable { cursor: pointer; transition: opacity .1s; }
+#carte path.cliquable:hover,
+#carte path.cliquable:focus { opacity: .68; outline: none; stroke: var(--texte); stroke-width: 1.2; }
+#carte path.inerte { opacity: .55; }
+
+.infobulle {
+  position: absolute; z-index: 5; pointer-events: none;
+  background: var(--fond-3); border: 1px solid var(--bord-vif);
+  border-radius: 9px; padding: 9px 12px; min-width: 150px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .45);
+}
+.infobulle strong { display: block; font-size: 14px; }
+.infobulle span { display: block; font-size: 12.5px; }
+.infobulle .bulle-score { font-weight: 600; margin-top: 2px; }
+.infobulle .bulle-acces { color: var(--texte-2); }
+.infobulle .bulle-note { color: var(--texte-3); font-size: 11.5px; margin-top: 3px; }
+
+/* ------------------------------------------------------------------ score */
+
+.score-bloc { margin-top: 16px; }
+.score-tete { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-bottom: 18px; }
+.score-nombre { font-size: 46px; font-weight: 700; line-height: 1; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.score-nombre small { font-size: 17px; font-weight: 500; opacity: .6; }
+.score-texte { flex: 1 1 260px; min-width: 0; }
+.score-texte strong { display: block; font-size: 16px; }
+.score-texte span { display: block; font-size: 13.5px; color: var(--texte-2); }
+
+.fiabilite {
+  display: inline-block !important; margin-top: 7px; cursor: help;
+  font-size: 11.5px; border-radius: 5px; padding: 2px 8px;
+  border: 1px solid var(--bord-vif); color: var(--texte-3) !important;
+}
+.fiabilite.indicative { color: var(--restreint) !important; border-color: color-mix(in srgb, var(--restreint) 40%, transparent); }
+
+.compos { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+.compo-tete { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; font-size: 13.5px; }
+.compo-tete span { color: var(--texte-2); }
+.compo-tete b { font-variant-numeric: tabular-nums; }
+.compo-tete small { color: var(--texte-3); font-weight: 400; }
+.compo-note { display: block; font-size: 11.5px; color: var(--texte-3); margin-top: 6px; line-height: 1.4; }
+
+.lien-fort { font-size: 15px; font-weight: 600; }
+
+/* ------------------------------------------------------------ grille pays */
+
+.grille {
+  display: grid; gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+}
+.carte-pays {
+  display: flex; align-items: center; gap: 10px; text-align: left;
+  background: var(--fond-2); border: 1px solid var(--bord); color: var(--texte);
+  border-radius: 10px; padding: 11px 13px; font: inherit; cursor: pointer;
+  transition: border-color .12s, transform .12s;
+}
+.carte-pays:hover { border-color: var(--bord-vif); transform: translateY(-1px); }
+.carte-pays .drapeau { font-size: 19px; line-height: 1; flex: none; }
+.carte-pays .nom { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 14.5px; }
+.carte-pays .pastille { flex: none; width: 8px; height: 8px; border-radius: 50%; }
+
+.pastille.libre { background: var(--libre); }
+.pastille.restreint { background: var(--restreint); }
+.pastille.bloque { background: var(--bloque); }
+
+.vide { color: var(--texte-3); padding: 24px 2px; }
+
+/* -------------------------------------------------------------- fiche pays */
+
+.retour {
+  background: none; border: 0; color: var(--texte-2); font: inherit; font-size: 14px;
+  cursor: pointer; padding: 6px 0; margin-bottom: 14px;
+}
+.retour:hover { color: var(--texte); }
+
+.fiche-tete { display: flex; align-items: flex-start; gap: 16px; flex-wrap: wrap; margin-bottom: 6px; }
+.fiche-tete .drapeau { font-size: 46px; line-height: 1; }
+.fiche-tete h1 { margin: 0; }
+.fiche-tete .region { color: var(--texte-3); font-size: 14px; }
+
+.etat {
+  display: inline-flex; align-items: center; gap: 8px;
+  border-radius: 999px; padding: 5px 14px; font-size: 13.5px; font-weight: 600;
+  border: 1px solid;
+}
+.etat.libre { color: var(--libre); border-color: color-mix(in srgb, var(--libre) 42%, transparent); background: color-mix(in srgb, var(--libre) 11%, transparent); }
+.etat.restreint { color: var(--restreint); border-color: color-mix(in srgb, var(--restreint) 42%, transparent); background: color-mix(in srgb, var(--restreint) 11%, transparent); }
+.etat.bloque { color: var(--bloque); border-color: color-mix(in srgb, var(--bloque) 42%, transparent); background: color-mix(in srgb, var(--bloque) 11%, transparent); }
+
+.resume { font-size: 17px; line-height: 1.65; max-width: 66ch; margin: 20px 0 6px; }
+
+.bloc {
+  background: var(--fond-2); border: 1px solid var(--bord);
+  border-radius: var(--r); padding: 18px 20px; margin: 14px 0;
+}
+.bloc > :first-child { margin-top: 0; }
+.bloc > :last-child { margin-bottom: 0; }
+
+/* mécanismes */
+.meca-liste { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.meca {
+  background: var(--fond-3); border: 1px solid var(--bord-vif);
+  border-radius: 9px; padding: 10px 13px; max-width: 340px; cursor: help;
+}
+.meca strong { display: block; font-size: 14px; }
+.meca span { display: block; font-size: 12.5px; color: var(--texte-2); line-height: 1.45; margin-top: 3px; }
+
+/* lois */
+.loi { border-left: 2px solid var(--bord-vif); padding: 2px 0 2px 16px; margin: 0 0 18px; }
+.loi:last-child { margin-bottom: 0; }
+.loi h3 { color: var(--texte); }
+.loi p { margin: 0; color: var(--texte-2); font-size: 14.5px; }
+.loi .delai {
+  display: inline-block; margin-top: 7px; font-size: 12.5px;
+  color: var(--restreint); border: 1px solid color-mix(in srgb, var(--restreint) 34%, transparent);
+  border-radius: 6px; padding: 2px 8px;
+}
+
+/* chronologie */
+.chrono { list-style: none; margin: 0; padding: 0; }
+.chrono li { display: grid; grid-template-columns: 96px 1fr; gap: 14px; padding: 9px 0; border-top: 1px solid var(--bord); }
+.chrono li:first-child { border-top: 0; padding-top: 0; }
+.chrono time { color: var(--texte-3); font-size: 13px; font-variant-numeric: tabular-nums; padding-top: 2px; }
+.chrono p { margin: 0; font-size: 14.5px; color: var(--texte-2); }
+
+/* chiffres */
+.chiffres { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.chiffre { background: var(--fond-3); border-radius: 10px; padding: 14px 16px; }
+.chiffre b { display: block; font-size: 25px; line-height: 1.1; font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+.chiffre span { display: block; font-size: 12.5px; color: var(--texte-2); margin-top: 5px; }
+.chiffre em { display: block; font-size: 11.5px; color: var(--texte-3); font-style: normal; margin-top: 2px; }
+
+.jauge { height: 4px; background: var(--fond); border-radius: 2px; margin-top: 9px; overflow: hidden; }
+.jauge i { display: block; height: 100%; background: var(--accent); }
+
+/* sources */
+.sources { list-style: none; margin: 0; padding: 0; }
+.sources li { padding: 5px 0; font-size: 14px; }
+
+.note { color: var(--texte-3); font-size: 13px; }
+
+/* ------------------------------------------------------------- classement */
+
+.segments { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px; }
+.segments button {
+  background: var(--fond-2); border: 1px solid var(--bord); color: var(--texte-2);
+  border-radius: 8px; padding: 7px 13px; font: inherit; font-size: 13.5px; cursor: pointer;
+}
+.segments button:hover { color: var(--texte); border-color: var(--bord-vif); }
+.segments button.actif { background: var(--fond-3); color: var(--texte); border-color: var(--bord-vif); }
+
+.rang { display: grid; grid-template-columns: 30px 1fr; gap: 12px; align-items: center; padding: 9px 0; border-top: 1px solid var(--bord); }
+.rang:first-child { border-top: 0; }
+.rang .n { color: var(--texte-3); font-size: 13px; text-align: right; font-variant-numeric: tabular-nums; }
+.rang .corps { min-width: 0; }
+.rang .ligne { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.rang .lien { background: none; border: 0; color: var(--texte); font: inherit; font-size: 15px; padding: 0; cursor: pointer; text-align: left; }
+.rang .lien:hover { color: var(--accent); }
+.rang .val { font-variant-numeric: tabular-nums; font-size: 14px; color: var(--texte-2); white-space: nowrap; }
+.rang .val small { color: var(--texte-3); margin-left: 7px; }
+.barre { height: 5px; background: var(--fond-2); border-radius: 3px; margin-top: 6px; overflow: hidden; }
+.barre i { display: block; height: 100%; border-radius: 3px; }
+
+/* ---------------------------------------------------------------- méthode */
+
+#methode h2:first-of-type { margin-top: 6px; }
+#methode p, #methode li { color: var(--texte-2); max-width: 68ch; }
+#methode dl { margin: 0; }
+#methode dt { font-weight: 600; color: var(--texte); margin-top: 16px; }
+#methode dd { margin: 4px 0 0; color: var(--texte-2); font-size: 14.5px; max-width: 68ch; }
+
+/* ------------------------------------------------------------------- pied */
+
+.pied { border-top: 1px solid var(--bord); padding: 26px 0 40px; margin-top: 30px; }
+.pied p { color: var(--texte-3); font-size: 13px; max-width: 70ch; margin: 0 0 8px; }
+.menu-fretin { font-size: 12.5px !important; }
+
+@media (max-width: 620px) {
+  .chrono li { grid-template-columns: 1fr; gap: 2px; }
+  .entete .dedans { height: auto; padding-top: 10px; padding-bottom: 10px; }
+  .carte-bloc { margin-inline: -8px; padding-inline: 10px; }
+  .carte-cadre { overflow-x: auto; overscroll-behavior-inline: contain; }
+  #carte { min-width: 620px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; scroll-behavior: auto !important; }
+}

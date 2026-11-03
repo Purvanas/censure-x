@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Censure sur X, pays par pays</title>
+<meta name="description" content="Choisissez un pays et lisez ce que son droit impose à X : retraits, masquage local, délais légaux, blocages, vérification d'âge — avec les chiffres publiés par X lui-même.">
+<meta property="og:title" content="Censure sur X, pays par pays">
+<meta property="og:description" content="Ce que le droit de chaque pays impose à X, et ce que X en fait.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0d10'/%3E%3Cpath d='M8 8l16 16M24 8L8 24' stroke='%23e8452f' stroke-width='3.2' stroke-linecap='round'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="entete">
+  <div class="dedans">
+    <a class="marque" href="/" data-lien-accueil>
+      <span class="marque-glyphe" aria-hidden="true">𝕏</span>
+      <span>
+        <strong>Censure sur X</strong>
+        <em>pays par pays</em>
+      </span>
+    </a>
+    <nav class="nav">
+      <button type="button" data-onglet="pays" class="actif">Par pays</button>
+      <button type="button" data-onglet="classement">Classement</button>
+      <button type="button" data-onglet="methode">Méthode</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============================================================ PAR PAYS -->
+  <section id="vue-pays" class="vue">
+
+    <div class="choix" id="choix">
+      <h1>Quelles règles de censure s'appliquent à X chez vous&nbsp;?</h1>
+      <p class="chapo">
+        X n'obéit pas aux mêmes règles partout. Selon le pays, un même message peut rester
+        en ligne, disparaître pour le monde entier, devenir invisible sur un seul territoire,
+        ou n'être jamais lu parce que la plateforme y est coupée. Choisissez un pays.
+      </p>
+
+      <div class="recherche">
+        <input type="search" id="recherche" placeholder="Chercher un pays…" autocomplete="off"
+               aria-label="Chercher un pays" spellcheck="false">
+        <button type="button" id="bouton-ici" class="ici" hidden>Mon pays</button>
+      </div>
+      <p class="erreur-chargement" id="erreur-globale" role="status" aria-live="polite" hidden></p>
+
+      <section class="carte-bloc" id="carte-bloc">
+        <div class="carte-tete">
+          <h2>Score de censure dans le monde</h2>
+          <div class="legende" id="legende"></div>
+        </div>
+        <div class="carte-cadre">
+          <svg id="carte" viewBox="0 0 1000 389" role="img"
+               aria-label="Carte du monde colorée selon le score de censure appliqué à X">
+            <g id="carte-pays"></g>
+          </svg>
+          <div class="infobulle" id="infobulle" hidden></div>
+        </div>
+        <p class="note" id="carte-note"></p>
+      </section>
+
+      <div class="filtres" id="filtres-region"></div>
+      <div class="grille" id="grille"></div>
+    </div>
+
+    <article class="fiche" id="fiche" hidden></article>
+  </section>
+
+  <!-- ========================================================== CLASSEMENT -->
+  <section id="vue-classement" class="vue" hidden>
+    <h1>Qui censure le plus&nbsp;?</h1>
+    <p class="chapo" id="chapo-classement"></p>
+    <div class="segments" id="segments-classement"></div>
+    <div id="classement"></div>
+  </section>
+
+  <!-- ============================================================= MÉTHODE -->
+  <section id="vue-methode" class="vue" hidden>
+    <h1>Comment lire ce site</h1>
+    <div id="methode"></div>
+  </section>
+
+</main>
+
+<footer class="pied">
+  <div class="dedans">
+    <p>
+      Chiffres&nbsp;: <a href="https://transparency.x.com/en/reports/removal-requests" rel="noreferrer noopener" target="_blank">X Transparency Center</a>,
+      export CSV couvrant 2012&ndash;2020.
+      Cadre juridique&nbsp;: textes officiels, décisions de justice et rapports d'organisations
+      de défense des libertés, cités dans chaque fiche.
+    </p>
+    <p class="menu-fretin">
+      Site indépendant, sans lien avec X Corp. Les fiches sont datées&nbsp;: une règle peut
+      avoir changé depuis. En cas de doute, la source fait foi, pas ce site.
+    </p>
+  </div>
+</footer>
+
+<script src="/app.js"></script>
+</body>
+</html>

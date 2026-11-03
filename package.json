@@ -1,0 +1,22 @@
+{
+  "name": "censurex",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Choisir un pays et lire les règles de censure qui s'appliquent à X (Twitter) sur son territoire",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.js",
+    "test": "node --test",
+    "build:figures": "node data/build-figures.js",
+    "build:carte": "node data/build-carte.js",
+    "collect:dsa": "node data/collect-dsa.js",
+    "probe:x": "node --env-file-if-exists=.env data/probe-x-api.js",
+    "check": "node --check server.js && node --check public/app.js && node --check lib/score.js && node --check lib/sources.js && node data/check-data.js"
+  },
+  "author": "Purvanas",
+  "license": "MIT",
+  "dependencies": {},
+  "engines": {
+    "node": "^22.0.0 || ^24.0.0"
+  }
+}
